@@ -1,0 +1,579 @@
+﻿# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_price_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-12 09:41+0000\n"
+"PO-Revision-Date: 2018-01-12 09:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_issue_count
+msgid "# Issues"
+msgstr "# Incidencias"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_task_count
+msgid "# Tasks"
+msgstr "# Tareas"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr "# Facturas de Proveedor"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_purchase_order_count
+msgid "# of Purchase Order"
+msgstr "# de Pedidos de Compra"
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "(update)"
+msgstr "(actualizar)"
+
+#. module: ascendia_price_request
+#: model:mail.template,body_html:ascendia_price_request.email_template_price_request_done
+msgid "<p>Hola ${object.request_id.responsible_id.partner_id.name},</p>\n"
+"	        El proveedor ${object.supplier_user_id.partner_id.name} ha completado la solicitud de precios ${object.request_id.display_name}.\n"
+"	        "
+msgstr "<p>Hola ${object.request_id.responsible_id.partner_id.name},</p>\n"
+"	        El proveedor ${object.supplier_user_id.partner_id.name} ha completado la solicitud de precios ${object.request_id.display_name}.\n"
+"	        "
+
+#. module: ascendia_price_request
+#: model:mail.template,body_html:ascendia_price_request.email_template_price_request
+msgid "<p>Hola ${object.supplier_user_id.partner_id.name},</p>\n"
+"	        <a href='${object.url}'>Se le a enviado esta solicitud de precios para editar</a>\n"
+"	        "
+msgstr "<p>Hola ${object.supplier_user_id.partner_id.name},</p>\n"
+"	        <a href='${object.url}'>Se le a enviado esta solicitud de precios para editar</a>\n"
+"	        "
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:109
+#, python-format
+msgid "A purchase order already exist link to this"
+msgstr "Ya existen pedidos de de compra relacionas con este elemento."
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:82
+#, python-format
+msgid "A sale order already exit link to this"
+msgstr "Ya existen pedidos de venta relacionas con este elemento."
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_activity_sector
+msgid "Activity Sector"
+msgstr "Sector de la Actividad"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_alternative_email
+msgid "Alternative mail"
+msgstr "Correo Alternativo"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_ascendia
+msgid "Ascendia"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ascendia_price_request
+#: selection:ascendia.price.request,state:0
+msgid "Canceled"
+msgstr "Cancelado"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_certifier
+msgid "Certifier"
+msgstr "Certificado por"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_partner_class
+msgid "Class"
+msgstr "Clase"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_client_id
+msgid "Client"
+msgstr "Cliente"
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_contract_ids
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_contracts_count
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: ascendia_price_request
+#: model:ir.ui.menu,name:ascendia_price_request.menu_purchase_control
+msgid "Control"
+msgstr "Control"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_payment_token_count
+msgid "Count Payment Token"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Create Purchase Order"
+msgstr "Crear Presupuesto de Compra"
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Create Sale Order"
+msgstr "Crear Pedido de Venta"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_create_uid
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_create_uid
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_create_date
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_create_date
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_property_stock_customer
+msgid "Customer Location"
+msgstr "Ubicación de Cliente"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_request_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_departament
+msgid "Departament"
+msgstr "Departamento"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_description
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Description"
+msgstr "Descripción"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_display_name
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_display_name
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: ascendia_price_request
+#: selection:ascendia.price.request.line,state:0
+#: selection:ascendia.price.request.partner.line,state:0
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Done"
+msgstr "Completado"
+
+#. module: ascendia_price_request
+#: selection:ascendia.price.request,state:0
+#: selection:ascendia.price.request.line,state:0
+#: selection:ascendia.price.request.partner.line,state:0
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: ascendia_price_request
+#: model:res.groups,name:ascendia_price_request.group_edit_price_request
+msgid "Edit Price Request"
+msgstr "Editar Solicitud de Precios"
+
+#. module: ascendia_price_request
+#: model:res.groups,name:ascendia_price_request.group_edit_own_price_request
+msgid "Edit my Price Request"
+msgstr "Editar Solicitud de Precios Propia"
+
+#. module: ascendia_price_request
+#: selection:ascendia.price.request,state:0
+msgid "Edited"
+msgstr "Editada"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_client_id
+msgid "Entity"
+msgstr "Entidad"
+
+#. module: ascendia_price_request
+#: selection:ascendia.price.request,state:0
+msgid "Finished"
+msgstr "Completada"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_id
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_id
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_id
+msgid "ID"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Items"
+msgstr "Líneas"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request___last_update
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line___last_update
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_last_name
+msgid "Last Name"
+msgstr "Apellidos"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_write_uid
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_write_uid
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_write_date
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_write_date
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_line_ids
+msgid "Line ids"
+msgstr "Líneas"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_request_id
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_linkedin
+msgid "Linkedin"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr "Mensaje para Pedidos de Compra"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "Mensaje para Albaranes"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_name
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_name_inf
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_notes
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Notes"
+msgstr "Notas"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_pqd
+msgid "PQD"
+msgstr ""
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_supplier_user_id
+msgid "Partner"
+msgstr "Proveedor"
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:155
+#, python-format
+msgid "Partner %s have not email address"
+msgstr "La empresa %s no tiene una dirección de correo válida."
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_request_partner_id
+msgid "Partner Line"
+msgstr "Lineas por proveedor"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_ids
+msgid "Partner line ids"
+msgstr "Líneas por Proveedor"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_partner_type
+msgid "Partner type"
+msgstr "Tipo"
+
+#. module: ascendia_price_request
+#: selection:ascendia.price.request.line,state:0
+#: selection:ascendia.price.request.partner.line,state:0
+msgid "Pending"
+msgstr "Editado"
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:153
+#, python-format
+msgid "Please select at least one Line."
+msgstr "Por favor, seleccione al menos una linea."
+
+#. module: ascendia_price_request
+#: model:ir.actions.act_window,name:ascendia_price_request.action_price_request_partner_line
+#: model:ir.ui.menu,name:ascendia_price_request.menu_price_request_partner
+msgid "Price Reqquest Partner"
+msgstr "Solicitud de Precios"
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:160
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:162
+#: model:ir.actions.act_window,name:ascendia_price_request.action_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_purchase_order_price_request_id
+#: model:ir.model.fields,field_description:ascendia_price_request.field_sale_order_price_request_id
+#: model:ir.ui.menu,name:ascendia_price_request.menu_price_request
+#: model:ir.ui.menu,name:ascendia_price_request.menu_price_request_partner_top
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+#, python-format
+msgid "Price Request"
+msgstr "Solicitud de Precios del Proveedor"
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Price Request Partner Line"
+msgstr "Solicitud de Precios del Proveedor"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_product_id
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_product_id_inf
+msgid "Product"
+msgstr "Producto"
+
+#. module: ascendia_price_request
+#: model:ir.model,name:ascendia_price_request.model_purchase_order
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_purchase_warn
+msgid "Purchase Order"
+msgstr "Pedido de Compra"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_purchase_order_ids
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Purchase Orders"
+msgstr "Pedidos de Compra"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_purchase_price
+msgid "Purchase Price"
+msgstr "Precio de Compra"
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Purchase Price Done"
+msgstr "Marcar como Editado"
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Purchase Price Draft"
+msgstr "Marcar para Editar"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_purchase_state
+msgid "Purchase state"
+msgstr "Estado de la Compra"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: ascendia_price_request
+#: selection:ascendia.price.request,state:0
+msgid "Ready to edit"
+msgstr "Listo para Editar"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_request_id
+msgid "Request"
+msgstr "Solicitud"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_responsible_id
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_sale_order_ids
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_form_ascendia_price_request
+msgid "Sale Orders"
+msgstr "Pedidos de Venta"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_sale_price
+msgid "Sale Price"
+msgstr "Precio de Venta"
+
+#. module: ascendia_price_request
+#: model:ir.model,name:ascendia_price_request.model_sale_order
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_sale_order_ids
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_sale_warn
+msgid "Sales Order"
+msgstr "Pedidos de Venta"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,help:ascendia_price_request.field_res_users_invoice_warn
+#: model:ir.model.fields,help:ascendia_price_request.field_res_users_picking_warn
+#: model:ir.model.fields,help:ascendia_price_request.field_res_users_purchase_warn
+#: model:ir.model.fields,help:ascendia_price_request.field_res_users_sale_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_size
+msgid "Size"
+msgstr "Tamañoo"
+
+#. module: ascendia_price_request
+#: model:mail.template,subject:ascendia_price_request.email_template_price_request
+msgid "Solicitud de Precios"
+msgstr "Solicitud de Precios"
+
+#. module: ascendia_price_request
+#: model:mail.template,subject:ascendia_price_request.email_template_price_request_done
+msgid "Solicitud de precios terminada"
+msgstr "Solicitud de precios terminada"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_state
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_state
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_state
+msgid "State"
+msgstr "Estado"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_picking_warn
+msgid "Stock Picking"
+msgstr "Albaranes"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr "Moneda del Proveedor"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_res_users_task_ids
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,help:ascendia_price_request.field_res_users_property_purchase_currency_id
+msgid "This currency will be used, instead of the default one, for purchases from the current partner"
+msgstr "This currency will be used, instead of the default one, for purchases from the current partner"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_total_gain
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_total_gain
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_total_gain
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Total Gain"
+msgstr "Total Ganado"
+
+#. module: ascendia_price_request
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Total Product"
+msgstr "Total de Productos"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_total_purchase
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_total_purchase
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_total_purchase
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Total Purchase Price"
+msgstr "Precio de Compra Total"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_line_total_sale
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_total_sale
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_total_sale
+#: model:ir.ui.view,arch_db:ascendia_price_request.view_ascendia_price_request_partner
+msgid "Total Sale Price"
+msgstr "Precio de Venta Total"
+
+#. module: ascendia_price_request
+#: model:ir.model.fields,field_description:ascendia_price_request.field_ascendia_price_request_partner_line_url
+msgid "Url"
+msgstr "Url"
+
+#. module: ascendia_price_request
+#: model:ir.model,name:ascendia_price_request.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/sale_purchase_order.py:39
+#, python-format
+msgid "You can delete a Purchase Order whit a request in finished state."
+msgstr "No puede borrar un Presupuesto de Compra con una Solicitud de Precios a Proveedores en estado Completado."
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/sale_purchase_order.py:16
+#, python-format
+msgid "You can delete a Sale Order whit a request in finished state."
+msgstr "No puede borrar un Presupuesto de Venta con una Solicitud de Precios a Proveedores en estado Completado."
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:209
+#, python-format
+msgid "You can delete a request in this state only in draft state"
+msgstr "No puede borrar una Solicitud de Precios a Proveedores en este estado,solo en estado Borrador o Cancelado."
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:195
+#, python-format
+msgid "You can delete or cancel a request with purchase orders in state different of draft"
+msgstr "No puede borrar una Solicitud de Precios a Proveedores con Pedidos de Compra confirmados"
+
+#. module: ascendia_price_request
+#: code:addons/ascendia_price_request/models/ascendia_price_request.py:201
+#, python-format
+msgid "You can delete or cancel a request with sale orders in state different of draft"
+msgstr "No puede n borrar una Solicitud de Precios a Proveedores con Pedidos de Venta confirmados"
+
+#. module: ascendia_price_request
+#: model:ir.model,name:ascendia_price_request.model_ascendia_price_request
+msgid "ascendia.price.request"
+msgstr "Solicitud de Precios a Proveedores"
+
+#. module: ascendia_price_request
+#: model:ir.model,name:ascendia_price_request.model_ascendia_price_request_line
+msgid "ascendia.price.request.line"
+msgstr "Linea de Solicitud de Precios a Proveedores"
+
+#. module: ascendia_price_request
+#: model:ir.model,name:ascendia_price_request.model_ascendia_price_request_partner_line
+msgid "ascendia.price.request.partner.line"
+msgstr "Linea de Solicitud de Precios a Proveedores"

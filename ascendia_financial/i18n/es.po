@@ -1,0 +1,105 @@
+﻿# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_financial
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180409\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-15 14:36+0000\n"
+"PO-Revision-Date: 2019-01-15 14:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "<strong>Company: </strong>"
+msgstr "<strong>Empresa: </strong>"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "<strong>Currency: </strong>"
+msgstr "<strong>Moneda: </strong>"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: ascendia_financial
+#: model:ir.actions.report.xml,name:ascendia_financial.act_report_mod111
+msgid "AEAT Model 111"
+msgstr "AEAT Modelo 111"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "Base"
+msgstr "Base Imponible"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "Cuote"
+msgstr "Cuota"
+
+#. module: ascendia_financial
+#: code:addons/ascendia_financial/models/l10n_es_aeat_tax_line.py:14
+#: model:ir.actions.act_window,name:ascendia_financial.action_account_moves_all_a1
+#, python-format
+msgid "Journal Items"
+msgstr "Apuntes contables"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "NIF"
+msgstr "NIF"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ascendia_financial
+#: model:ir.ui.view,arch_db:ascendia_financial.report_aeat_mod111_document
+msgid "Taxe"
+msgstr "Tipo IRPF"
+
+#. module: ascendia_financial
+#: model:ir.model,name:ascendia_financial.model_ascendia_financial_report_mod111
+msgid "ascendia_financial.report_mod111"
+msgstr "ascendia_financial.report_mod111"
+
+#. module: ascendia_financial
+#: model:ir.model,name:ascendia_financial.model_l10n_es_aeat_tax_line
+msgid "l10n.es.aeat.tax.line"
+msgstr "l10n.es.aeat.tax.line"
+
+#. module: ascendia_financial
+#: model:ir.model,name:ascendia_financial.model_report_ascendia_financial_report_mod111
+msgid "report.ascendia_financial.report_mod111"
+msgstr "report.ascendia_financial.report_mod111"
+
+#. module: ascendia_financial
+#: model:ir.model,name:ascendia_financial.model_report_mod111
+msgid "report_mod111"
+msgstr "report_mod111"
+
+#. module: ascendia_financial
+#: model:ir.model.fields,help:ascendia_financial.field_account_account_group
+msgid "Set group for Level 3 or level 4."
+msgstr "Especifique un número que corresponda al Nivel 3 o Nivel 4."
+
+#. module: ascendia_financial
+#: code:addons/ascendia_financial/models/account_account.py:46
+#, python-format
+msgid "Do not exist any account for this Group: %s"
+msgstr "No existe una cuenta registrada para el Grupo: %s"
+
+#. module: ascendia_financial
+#: model:ir.model.fields,field_description:ascendia_financial.field_account_account_group
+msgid "Group"
+msgstr "Grupo"
+

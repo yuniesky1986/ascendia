@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="task_menu" name="Task menu" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/ascendia_crm_project/static/src/js/task_menu.js"></script>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

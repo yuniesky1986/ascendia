@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_invoice_line_tree_financial_project" model="ir.ui.view">
+            <field name="name">account.invoice.line.tree.financial.project</field>
+            <field name="model">account.invoice.line</field>
+            <field name="arch" type="xml">
+                <tree string="Invoice Line">
+                    <field name="name"/>
+                    <field name="invoice_id"/>
+                    <field name="partner_id"/>
+                    <field name="account_id" groups="account.group_account_user"/>
+                    <field name="quantity" sum="Total Qty"/>
+                    <field name="uom_id" groups="product.group_uom"/>
+                    <field name="price_unit" sum="Total Price Unit" widget="monetary"/>
+                    <field name="discount" groups="base.group_no_one" sum="Total Discount" widget="monetary"/>
+                    <field name="price_subtotal" sum="Total Price Subtotal" widget="monetary" invisible="1"/>
+                    <field name="line_price_total" sum="Total Price Total" widget="monetary"/>
+                    <field name="currency_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_invoice_line_form_financial_project" model="ir.ui.view">
+            <field name="name">account.invoice.line.form.financial.project</field>
+            <field name="model">account.invoice.line</field>
+            <field name="inherit_id" ref="account.view_invoice_line_form"/>
+            <field name="arch" type="xml">
+                <field name="product_id" position="before">
+                    <field name="invoice_id" invisible="not context.get('project', False)"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="action_view_invoice_line_tree_financial_project" model="ir.actions.act_window">
+            <field name="name">Invoice Lines</field>
+            <field name="res_model">account.invoice.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'project': True}</field>
+            <field name="domain">[]</field>
+            <field name="view_id" ref="ascendia_project_financial.view_invoice_line_tree_financial_project"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to register a payment
+                </p><p>
+                  Payments are used to register liquidity movements (send, collect or transfer money).
+                  You can then process those payments by your own means or by using installed facilities.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

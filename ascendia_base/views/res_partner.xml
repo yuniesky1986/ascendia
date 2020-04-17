@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+		<record id="view_res_partner_filter_inherit" model="ir.ui.view">
+            <field name="name">res.partner.select.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <filter domain="[('user_id','=',uid)]" position="replace"/>
+                <filter name="customer" position="attributes">
+                	<attribute name="domain">[('parent_id', '=', False)]</attribute>
+                </filter>
+                <filter name="customer" position="replace"/>
+                <filter name="supplier" position="replace"/>
+            </field>
+        </record>
+            
+		<record model="ir.ui.view" id="res_partner_kanban_view_inherit">
+            <field name="name">res.partner.kanban.inherit</field>
+            <field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='title']"
+                       position="replace"/>
+            </field>
+        </record>
+
+		<record id="view_partner_address_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.address.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_address_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='city']"
+                       position="attributes">
+                       <attribute name="placeholder">Municipality</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state_id']"
+                       position="replace"/>
+                <xpath expr="//field[@name='country_id']"
+                       position="after">
+                        <field name="state_id" class="o_address_state"
+                        	placeholder="Province"
+                        	options='{"no_open": True}'
+                        	domain="[('country_id', '=', country_id)]"
+                        	context="{'country_id': country_id, 'default_country_id': country_id}"/>
+                </xpath>
+            </field>
+        </record>
+        <!--partner form -->
+		<record id="view_partner_simple_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.simplified.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_simple_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_type']"
+                       position="replace">
+                       <field name="company_type" options="{'horizontal': true}" widget="radio"/>
+                </xpath>
+            </field>
+        </record>
+            
+        <record id="view_partner_form_ascendia" model="ir.ui.view">
+            <field name="name">res.partner.form.ascendia</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" 
+                	position="attributes">
+            		<attribute name="placeholder">Entity</attribute>
+            	</xpath>
+                <xpath expr="//field[@name='company_type']"
+                       position="replace">
+                       <field name="company_type" options="{'horizontal': true}" widget="radio"/>
+                </xpath>
+                <xpath expr="//field[@name='email']"
+                       position="after">
+                       <field name="alternative_email" widget="email"/>
+                </xpath>
+                <xpath expr="//field[@name='fax']" position="replace"/>
+                <xpath expr="//field[@name='title']"
+                       position="replace">
+                        <field name="partner_class" attrs="{'invisible': [('company_type', '=', 'person')]}"/>
+                        <field name="certifier" attrs="{'invisible': [('company_type', '=', 'person')]}"/>
+                        <field name="pqd" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                        <field name="departament" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                       	<field name="activity_sector" attrs="{'invisible': [('company_type', '=', 'person')]}"/>
+                       	<field name="cnae" attrs="{'invisible': [('company_type', '=', 'person')]}"/>
+                       	<field name="size" attrs="{'invisible': [('company_type', '=', 'person')]}"/>
+                       	<field name="partner_type" attrs="{'invisible': [('company_type', '=', 'person')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='website']"
+                       position="before">
+                        <field name="partner_nif"/>
+                </xpath>
+                <xpath expr="//field[@name='website']"
+                       position="after">
+                        <field name="twitter"/>
+                        <field name="linkedin"/>
+                        <field name="facebook"/>
+                </xpath>
+                <!-- <xpath expr="//field[@name='name']"
+                       position="after">
+                        <field name="last_name" placeholder="Last Name"
+                        	attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                </xpath> -->
+                <xpath expr="//field[@name='city']"
+                       position="attributes">
+                       <attribute name="placeholder">Municipality</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state_id']"
+                       position="replace"/>
+                <xpath expr="//field[@name='title']"
+                       position="attributes">
+                       <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='country_id']"
+                       position="after">
+                        <field name="state_id" class="o_address_state"
+                        	placeholder="Province"
+                        	options='{"no_open": True}'
+                        	domain="[('country_id', '=', country_id)]"
+                        	context="{'country_id': country_id, 'default_country_id': country_id}"/>
+                </xpath>
+                <xpath expr="//page[@autofocus='autofocus']"
+                       position="attributes">
+                       <attribute name="attrs">{'invisible': [('company_type', '=', 'person')]}</attribute>
+                </xpath>
+                <xpath expr="//page/field[@name='child_ids']/form//field[@name='name']"
+                       position="after">
+                       <field name="last_name" placeholder="Last Name"/>
+                </xpath>
+                <xpath expr="//page[@name='internal_notes']"
+                       position="replace">
+                       <page name='internal_notes' string="Internal Notes" invisible="1">
+                            <field name="comment" placeholder="Internal note..." readonly="1"/>
+                        </page>
+                </xpath>
+                <xpath expr="//field[@name='lang']"
+                       position="attributes">
+                       <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='sales_purchases']"
+                       position="attributes">
+                       <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+       <!--  <record id="view_partner_property_form_ascendia" model="ir.ui.view">
+            <field name="name">res.partner.property.form.inherit.ascendia</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='accounting']"
+                       position="attributes">
+                       <attribute name="invisible">0</attribute>
+                </xpath>
+            </field>
+        </record> -->
+        
+        <record id="view_company_form_iban" model="ir.ui.view">
+            <field name="name">res.company.form.iban</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <field name="website" position="after">
+                	<field name="iban"/>
+                </field>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

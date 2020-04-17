@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	
+        <record id="crm_case_form_view_oppor" model="ir.ui.view">
+            <field name="name">crm.lead.oppor.inherited.crm</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+            	<label for="name" position="replace">
+            		<field name="id" invisible="1"/>
+            	</label>
+            	<field name="name" position="attributes">
+            		<attribute name="readonly">1</attribute>
+            		<attribute name="attrs">{'invisible': [('id', '=', False)]}</attribute>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_create_opportunity_simplified_name" model="ir.ui.view">
+            <field name="name">crm.lead.form.simple.name</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_create_opportunity_simplified"/>
+            <field name="arch" type="xml">
+            	<field name="name" position="replace"/>
+            </field>
+        </record>
+
+    </data>
+</odoo>

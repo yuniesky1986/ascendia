@@ -1,0 +1,833 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_mod347
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180409\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-07 03:03+0000\n"
+"PO-Revision-Date: 2019-02-07 03:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/models/mod347.py:369
+#: code:addons/ascendia_mod347/models/mod347.py:376
+#, python-format
+msgid "- %s (%s)"
+msgstr "- %s (%s)"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "<strong>Leyend:</strong> <span style=\"color: blue;\">Refund invoices</span> - Normal invoices"
+msgstr "<strong>Leyend:</strong> <span style=\"color: blue;\">Refund invoices</span> - Normal invoices"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "AEAT 347 MODEL"
+msgstr "MODELO AEAT 347"
+
+#. module: ascendia_mod347
+#: model:ir.actions.report.xml,name:ascendia_mod347.report_l10n_es_aeat_mod347
+msgid "AEAT 347 Model report"
+msgstr "Modelo 347"
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_l10n_es_aeat_mod347_report
+msgid "AEAT 347 Report"
+msgstr "Modelo 347"
+
+#. module: ascendia_mod347
+#: model:ir.ui.menu,name:ascendia_mod347.menu_aeat_mod347_report
+msgid "AEAT 347 model"
+msgstr "Modelo 347"
+
+#. module: ascendia_mod347
+#: model:ir.actions.act_window,name:ascendia_mod347.action_l10n_es_aeat_mod347_report
+msgid "AEAT Model 347"
+msgstr "Modelo AEAT 347"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Amount (Q1|Q2|Q3|Q4)"
+msgstr "Importe (T1|T2|T3|T4)"
+
+#. module: ascendia_mod347
+#: model:ir.actions.act_window,help:ascendia_mod347.action_l10n_es_aeat_mod347_report
+msgid "Basado en la Orden EHA/3012/2008, de 20 de Octubre, por el que se aprueban\n"
+"                los diseños físicos y lógicos del 347."
+msgstr "Basado en la Orden EHA/3012/2008, de 20 de Octubre, por el que se aprueban\n"
+"                los diseños físicos y lógicos del 347."
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "Calculation parameters"
+msgstr "Parámetros de cálculo"
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_l10n_es_aeat_mod347_cash_record
+msgid "Cash Record"
+msgstr "Registro de efectivo"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Cash amount"
+msgstr "Importe en efectivo"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Cash record"
+msgstr "Registro de efectivo"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Cash records"
+msgstr "Registros de efectivo"
+
+#. module: ascendia_mod347
+#: model:ir.actions.act_window,help:ascendia_mod347.action_l10n_es_aeat_mod347_report
+msgid "Click to create a AEAT Model 347 Reports."
+msgstr "Click to create a AEAT Model 347 Reports."
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_cash_record_create_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_export_to_boe_create_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_invoice_record_create_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_partner_record_create_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_real_estate_record_create_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_report_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_cash_record_create_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_export_to_boe_create_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_invoice_record_create_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_partner_record_create_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_real_estate_record_create_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_report_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Details"
+msgstr "Detalles"
+
+#. module: ascendia_mod347
+#: model:ir.actions.act_window,name:ascendia_mod347.action_wizard_aeat_mod347_export
+msgid "Export AEAT 347 BOE file"
+msgstr "Exportar archivo BOE AEAT 347"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Fiscal year:"
+msgstr "Ejercicio fiscal:"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "General"
+msgstr "General"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.partner_record_search_view
+msgid "Group by..."
+msgstr "Agrupar por..."
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,help:ascendia_mod347.field_account_invoice_not_in_mod347
+msgid "If you mark this field, this invoice will not be included in any AEAT 347 model report."
+msgstr "If you mark this field, this invoice will not be included in any AEAT 347 model report."
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,help:ascendia_mod347.field_res_partner_not_in_mod347
+#: model:ir.model.fields,help:ascendia_mod347.field_res_users_not_in_mod347
+msgid "If you mark this field, this partner will not be included in any AEAT 347 model report, independently from the total amount of its operations."
+msgstr "If you mark this field, this partner will not be included in any AEAT 347 model report, independently from the total amount of its operations."
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Ins. Oper"
+msgstr "Op. seguro"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.partner_record_search_view
+msgid "Invalid records"
+msgstr "Invalid records"
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_account_invoice
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_l10n_es_aeat_mod347_invoice_record
+msgid "Invoice Record"
+msgstr "Registro de factura"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Invoice record"
+msgstr "Registro de factura"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Invoice records"
+msgstr "Registros de facturas"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Invoiced amount"
+msgstr "Importe facturado"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Key Oper."
+msgstr "Clave oper."
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_cash_record_write_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_export_to_boe_write_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_invoice_record_write_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_partner_record_write_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_real_estate_record_write_uid
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_report_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_cash_record_write_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_export_to_boe_write_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_invoice_record_write_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_partner_record_write_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_real_estate_record_write_date
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_report_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_partner_form_mod347
+msgid "Mod 347"
+msgstr "Mod 347"
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_account_invoice_not_in_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_res_partner_not_in_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_res_users_not_in_mod347
+msgid "Not included in 347 report"
+msgstr "Not included in 347 report"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Period:"
+msgstr "Período:"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.partner_record_search_view
+msgid "Operation key"
+msgstr "Clave operación"
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,help:ascendia_mod347.field_l10n_es_aeat_mod347_partner_record_origin_fiscalyear_id
+msgid "Origin cash operation fiscal year"
+msgstr "Origin cash operation fiscal year"
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_l10n_es_aeat_mod347_partner_record_origin_fiscalyear_id
+msgid "Origin fiscal year"
+msgstr "Origin fiscal year"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "PARTNER RECORD LINES"
+msgstr "LÍNEAS DE REGISTRO DE EMPRESA"
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_res_partner
+#: model:ir.ui.view,arch_db:ascendia_mod347.partner_record_search_view
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_tree
+msgid "Partners records"
+msgstr "Registros de empresas"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_tree
+msgid "Operations amount"
+msgstr "Importe operaciones"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_tree
+msgid "Cash movements amount"
+msgstr "Importe de movimientos en Efectivo"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_tree
+msgid "Real estate records"
+msgstr "Registro de inmuebles"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_tree
+msgid "Real estate transmissions amount"
+msgstr "Importe de transmisiones inmobiliarias"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_tree
+msgid "Real estate amount"
+msgstr "Importe de inmuebles"
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_l10n_es_aeat_mod347_partner_record
+#: model:ir.ui.view,arch_db:ascendia_mod347.partner_record_search_view
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Partner Record"
+msgstr "Registro de empresa"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Partner Records"
+msgstr "Registros de empresas"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/models/mod347.py:339
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#, python-format
+msgid "Partner records"
+msgstr "Registros de empresas"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_real_estate_record_form
+msgid "Partner info"
+msgstr "Información empresa"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/models/mod347.py:382
+#, python-format
+msgid "Partner record errors:\n"
+""
+msgstr "Partner record errors:\n"
+""
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/models/mod347.py:339
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+#, python-format
+msgid "Partner records"
+msgstr "Registros de empresas"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/models/mod347.py:379
+#, python-format
+msgid "Please review partner and real estate records, some of them are in red color:\n"
+"\n"
+""
+msgstr "Please review partner and real estate records, some of them are in red color:\n"
+"\n"
+""
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "RS Rent"
+msgstr "Arrend. inmueb. negocio"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "RST amount"
+msgstr "Importe T.I."
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_l10n_es_aeat_mod347_real_estate_record
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_real_estate_record_form
+msgid "Real Estate Record"
+msgstr "Registros de inmuebles"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_real_estate_record_tree
+msgid "Real Estate Records"
+msgstr "Registros de inmuebles"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Real Estate Transmission (Q1|Q2|Q3|Q4)"
+msgstr "Importe transmisión inmueble (T1|T2|T3|T4)"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_real_estate_record_form
+msgid "Real estate address"
+msgstr "Dirección del inmueble"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_real_estate_record_form
+msgid "Real estate info"
+msgstr "Información de inmuebles"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/models/mod347.py:386
+#, python-format
+msgid "Real estate record errors:\n"
+""
+msgstr "Real estate record errors:\n"
+""
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/models/mod347.py:351
+#, python-format
+msgid "Real estate records"
+msgstr "Registro de inmuebles"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.partner_record_search_view
+msgid "Record"
+msgstr "Registro"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "Support type:"
+msgstr "Tipo de soporte:"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/wizard/export_mod347_to_boe.py:68
+#, python-format
+msgid "The type 1 record must be 502 characters long"
+msgstr "El tipo de registro 1 debe ser de 502 caracteres de largo"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/wizard/export_mod347_to_boe.py:202
+#, python-format
+msgid "The type 2-D record (partner) must be 502 characters long"
+msgstr "El tipo de registro 2-D (empresa) debe ser de 502 caracteres de largo"
+
+#. module: ascendia_mod347
+#: code:addons/ascendia_mod347/wizard/export_mod347_to_boe.py:308
+#, python-format
+msgid "The type 2-I record (real estate) must be 502 characters long"
+msgstr "El tipo de registro 2-I (inmuebles) debe ser de 502 caracteres de largo"
+
+#. module: ascendia_mod347
+#: model:ir.model.fields,field_description:ascendia_mod347.field_account_invoice_amount_total_wo_irpf
+msgid "Total amount without IRPF taxes"
+msgstr "Total amount without IRPF taxes"
+
+#. module: ascendia_mod347
+#: report:report_l10n_es_aeat_mod347.report:0
+msgid "VAT"
+msgstr "NIF"
+
+#. module: ascendia_mod347
+#: model:ir.model,name:ascendia_mod347.model_l10n_es_aeat_mod347_export_to_boe
+msgid "l10n.es.aeat.mod347.export_to_boe"
+msgstr "l10n.es.aeat.mod347.export_to_boe"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_company_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_company_vat
+msgid "VAT number"
+msgstr "NIF"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_year
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_year
+msgid "Year"
+msgstr "Año"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_representative_vat
+msgid "L.R. VAT number"
+msgstr "NIF repr. legal"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_period_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_period_type
+msgid "Period type"
+msgstr "Tipo de período"
+
+#. module: l10n_es_aeat
+#: model:ir.actions.act_window,name:l10n_es_aeat.action_aeat_export_config
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_export_config_id
+msgid "Export config"
+msgstr "Configuración de exportación"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_representative_vat
+msgid "L.R. VAT number"
+msgstr "NIF repr. legal"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_support_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_support_type
+msgid "Support Type"
+msgstr "Tipo de soporte"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_calculation_date
+msgid "Calculation date"
+msgstr "Fecha de cálculo"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_partner_bank_id
+msgid "Bank account"
+msgstr "Cuenta bancaria"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_contact_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_contact_name
+msgid "Full Name"
+msgstr "Nombre completo"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_type
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_type
+msgid "Statement Type"
+msgstr "Tipo de declaración"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_contact_phone
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_contact_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_export_to_boe_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_state
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_state
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_es_aeat
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod111_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod115_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod216_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod296_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod303_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod347_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod349_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_mod390_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_aeat_report_tax_mapping_name
+#: model:ir.model.fields,field_description:l10n_es_aeat.field_l10n_es_vat_book_name
+msgid "Report identifier"
+msgstr "Identificador del informe"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "Invoiced Limit (1)"
+msgstr "Límite facturado (1)"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "Received cash Limit (2)"
+msgstr "Límite efectivo (2)"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "Charges on behalf of third parties Limit (3)"
+msgstr "Cargos por cuenta de terceros superiores al límite (3)"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "Group by VAT number"
+msgstr "Agrupar por NIF"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_report_form
+msgid "Only Suppliers"
+msgstr "Solo Proveedores"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+#: model:ir.ui.view,arch_db:ascendia_mod347.partner_record_search_view
+msgid "Operation Key"
+msgstr "Clave operación"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+msgid "VAT number"
+msgstr "NIF"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+msgid "Amount"
+msgstr "Importe"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+msgid "Insurance Operation"
+msgstr "Operación seguro"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+msgid "Bussiness Real Estate Rent"
+msgstr "Arrendamiento local negocio"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+msgid "Anual cash movements amount"
+msgstr "Importe efectivo anual de movimientos"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_tree
+msgid "Real estate transmisions amount"
+msgstr "Importe de transmisiones inmobiliarias"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "L.R. VAT number"
+msgstr "NIF R.L."
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Community vat number"
+msgstr "NIF de comunidad"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Country Code"
+msgstr "Código de país"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "State Code"
+msgstr "Código de provincia"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "First quarter operations"
+msgstr "Operaciones primer trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Second quarter operations"
+msgstr "Operaciones segundo trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Third quarter operations"
+msgstr "Operaciones tercer trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Fourth quarter operations"
+msgstr "Operaciones cuarto trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "First quarter cash movements"
+msgstr "Movimientos efectivo primer trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Second quarter cash movements"
+msgstr "Movimientos efectivo segundo trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Third quarter cash movements"
+msgstr "Movimientos efectivo tercer trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Fourth quarter cash movements"
+msgstr "Movimientos efectivo cuarto trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "First quarter real estate"
+msgstr "Estado primer trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Second quarter real estate"
+msgstr "Estado segundo trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Third quarter real estate"
+msgstr "Estado tercer trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Fourth quarter real estate"
+msgstr "Estado cuarto trimestre"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Cash Basis Operation"
+msgstr "Operaciones de criterio de caja"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Taxable Person Operation"
+msgstr "Operación de sujeto pasivo"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Related Goods Operation"
+msgstr "Operación de mercaderías relacionadas"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Date"
+msgstr "Fecha"
+
+#. module: ascendia_mod347
+#: model:ir.ui.view,arch_db:ascendia_mod347.view_l10n_es_aeat_mod347_partner_record_form
+msgid "Move line"
+msgstr "Movimientos"
+
+
+
+
+
+

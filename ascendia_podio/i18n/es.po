@@ -1,0 +1,641 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_podio
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170629\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-06 03:57+0000\n"
+"PO-Revision-Date: 2019-01-06 03:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_podio
+#: selection:student,initial_selection:0
+#: selection:student,pre_selection:0
+#: selection:student,state_change:0
+msgid "Admited"
+msgstr "Admitido"
+
+#. module: ascendia_podio
+#: selection:student,responsible:0
+msgid "Anfora"
+msgstr "Anfora"
+
+#. module: ascendia_podio
+#: selection:student,responsible:0
+msgid "Ascendia"
+msgstr "Ascendia"
+
+#. module: ascendia_podio
+#: model:ir.ui.view,arch_db:ascendia_podio.baremation_form_view
+msgid "Baremation"
+msgstr "Baremación"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_baremations
+#: model:ir.ui.menu,name:ascendia_podio.menu_baremations
+#: model:ir.ui.view,arch_db:ascendia_podio.baremation_tree_view
+msgid "Baremations"
+msgstr "Baremación"
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_ascendia_certificate
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_certificate_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_certificate_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_certificate_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_certificate_id
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_form_view
+msgid "Certificate"
+msgstr "Certificado"
+
+#. module: ascendia_podio
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_formation_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_good_execution_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_lopd_form_view
+msgid "Certificate Formation"
+msgstr "Certificado Formación"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_certificates
+#: model:ir.ui.menu,name:ascendia_podio.menu_certificates
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_tree_view
+msgid "Certificates"
+msgstr "Certificados"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_city
+#: model:ir.ui.view,arch_db:ascendia_podio.city_tree_view
+msgid "Cities"
+msgstr "Ciudades"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_city
+#: model:ir.ui.view,arch_db:ascendia_podio.city_form_view
+msgid "City"
+msgstr "Ciudad"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_code
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_code
+msgid "Code"
+msgstr "Código"
+
+#. module: ascendia_podio
+#: model:ir.ui.menu,name:ascendia_podio.menu_asc_marketing_config
+#: model:ir.ui.menu,name:ascendia_podio.menu_training_employment_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_user_id
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ascendia_podio
+#: model:ir.ui.view,arch_db:ascendia_podio.course_form_view
+msgid "Course"
+msgstr "Curso"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_courses
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_course_ids
+#: model:ir.ui.menu,name:ascendia_podio.menu_courses
+#: model:ir.ui.view,arch_db:ascendia_podio.course_tree_view
+#: model:ir.ui.view,arch_db:ascendia_podio.interested_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.student_form_view
+msgid "Courses"
+msgstr "Cursos"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_create_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_create_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_date_birth
+msgid "Date birth"
+msgstr "Fecha de nacimiento"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_date_renounce
+msgid "Date renounce"
+msgstr "Fecha de renuncia"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_display_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_dni
+msgid "Dni"
+msgstr "DNI"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_doc_type
+msgid "Doc type"
+msgstr "Tipo de documento"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_edition_ids
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_lopd_form_view
+msgid "Edition Dates"
+msgstr "Fechas de Edición"
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_ascendia_edition_number
+msgid "Edition Number"
+msgstr "Ediciones"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_ascendia_edition_year
+#: model:ir.model,name:ascendia_podio.model_ascendia_edition_year
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_year
+#: model:ir.ui.menu,name:ascendia_podio.menu_edition_year
+#: model:ir.ui.view,arch_db:ascendia_podio.edition_year_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.edition_year_tree_view
+msgid "Edition Year"
+msgstr "Fechas de Edición"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_email
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. module: ascendia_podio
+#: selection:student,initial_selection:0
+#: selection:student,pre_selection:0
+msgid "Excluded"
+msgstr "Excluido"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: ascendia_podio
+#: selection:student,sex:0
+msgid "Female"
+msgstr "Mujer"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_first_last_name
+msgid "First last name"
+msgstr "Apellido 1"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_ascendia_certificate_formation
+#: model:ir.model,name:ascendia_podio.model_ascendia_certificate_formation
+#: model:ir.ui.menu,name:ascendia_podio.menu_certificate_formation
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_formation_tree_view1
+msgid "Formation Certificate"
+msgstr "Certificado Formación"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_formative_action
+msgid "Formative action"
+msgstr "Acción formativa"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_ascendia_certificate_good_execution
+#: model:ir.model,name:ascendia_podio.model_ascendia_certificate_good_execution
+#: model:ir.ui.menu,name:ascendia_podio.menu_certificate_good_execution
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_formation_tree_view
+msgid "Good Execution Certificate"
+msgstr "Certificado de Buena Ejecución"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_id
+msgid "ID"
+msgstr "ID"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_in_gefoc
+msgid "In GEFOC"
+msgstr "Incluido en GEFOC"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_initial_selection
+msgid "Initial Selection"
+msgstr "Selección Inicial de Admitidos"
+
+#. module: ascendia_podio
+#: model:ir.ui.view,arch_db:ascendia_podio.interested_form_view
+msgid "Interested"
+msgstr "Interesado"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_interested
+#: model:ir.ui.menu,name:ascendia_podio.menu_interested
+#: model:ir.ui.view,arch_db:ascendia_podio.interested_tree_view
+msgid "Interesteds"
+msgstr "Interesados"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_is_request
+msgid "Is request"
+msgstr "Presenta Solicitud"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_is_student
+msgid "Is student"
+msgstr "Es estudiante"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_ascendia_certificate_lopd
+#: model:ir.model,name:ascendia_podio.model_ascendia_certificate_lopd
+#: model:ir.ui.menu,name:ascendia_podio.menu_certificate_lopd
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_lopd_tree_view
+msgid "LOPD Certificate"
+msgstr "Certificado LOPD"
+
+#. module: ascendia_podio
+#: selection:student,renounce:0
+msgid "Laboral Insertion"
+msgstr "Inserción laboral"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_city___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_course___last_update
+#: model:ir.model.fields,field_description:ascendia_podio.field_student___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_write_uid
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_write_date
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: ascendia_podio
+#: selection:student,sex:0
+msgid "Male"
+msgstr "Hombre"
+
+#. module: ascendia_podio
+#: model:ir.ui.menu,name:ascendia_podio.menu_ascendia_marketing
+msgid "Marketing"
+msgstr "Marketing"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_member_id
+msgid "Member"
+msgstr "Miembro"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_missing_doc
+msgid "Missing doc"
+msgstr "Falta documentación"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_mobile
+msgid "Mobile"
+msgstr "Móvil"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_number_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_name
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ascendia_podio
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_formation_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_formation_tree_view1
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_lopd_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_lopd_tree_view
+msgid "No. Certificate"
+msgstr "No. Certificado"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_edition_year_edition_id
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_lopd_form_view
+msgid "No. Edition Date"
+msgstr "No. Fecha de Edición"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_number
+msgid "Number"
+msgstr "Número"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_partner_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_partner_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_partner_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_partner_id
+msgid "Organization"
+msgstr "Organización"
+
+#. module: ascendia_podio
+#: selection:student,renounce:0
+msgid "Other Selection Center"
+msgstr "Selección en otro centro"
+
+#. module: ascendia_podio
+#: selection:student,renounce:0
+msgid "Personal Motives"
+msgstr "Motivos personales"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_lead_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_lead_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lead_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_lead_id
+msgid "Pipeline"
+msgstr "Oportunidad"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_practic_hours
+msgid "Practic hours"
+msgstr "Horas de prácticas (en empresa)"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_pre_selection
+msgid "Pre-selection"
+msgstr "Preselección"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_price
+msgid "Price"
+msgstr "Precio"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_quotation
+msgid "Quotation"
+msgstr "Presupuesto a justificar"
+
+#. module: ascendia_podio
+#: selection:ascendia.certificate.good.execution,state:0
+msgid "Received"
+msgstr "Recibido"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_renounce
+#: selection:student,state_change:0
+msgid "Renounce"
+msgstr "Renuncia"
+
+#. module: ascendia_podio
+#: selection:ascendia.certificate.good.execution,state:0
+msgid "Requested"
+msgstr "Solicitado"
+
+#. module: ascendia_podio
+#: selection:student,initial_selection:0
+msgid "Reserve"
+msgstr "Reserva"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_reserve_number
+msgid "Reserve number"
+msgstr "Número de reserva"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_responsible
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_second_last_name
+msgid "Second last name"
+msgstr "Apellido 2"
+
+#. module: ascendia_podio
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_formation_tree_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_good_execution_form_view
+msgid "Service"
+msgstr "Servicio"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_sex
+msgid "Sex"
+msgstr "Sexo"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_state
+#: model:ir.model.fields,field_description:ascendia_podio.field_city_state_id
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_state_id
+msgid "State"
+msgstr "Estado"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_state_change
+msgid "State change"
+msgstr "Cambio de estado"
+
+#. module: ascendia_podio
+#: code:addons/ascendia_podio/models/student.py:80
+#: model:ir.ui.view,arch_db:ascendia_podio.student_form_view
+#, python-format
+msgid "Student"
+msgstr "Alumno"
+
+#. module: ascendia_podio
+#: model:ir.actions.act_window,name:ascendia_podio.action_students
+#: model:ir.ui.menu,name:ascendia_podio.menu_students
+#: model:ir.ui.view,arch_db:ascendia_podio.student_tree_view
+msgid "Students"
+msgstr "Alumnos"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_task_ids
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_good_execution_task_ids
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_lopd_task_ids
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_task_ids
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_task_ids
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_task_ids
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_task_ids
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_task_ids
+#: model:ir.ui.view,arch_db:ascendia_podio.baremation_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_formation_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.certificate_lopd_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.course_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.interested_form_view
+#: model:ir.ui.view,arch_db:ascendia_podio.student_form_view
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_teoric_hours
+msgid "Teoric hours"
+msgstr "Horas teóricas (en sala)"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_baremation_text_baremation
+msgid "Text"
+msgstr "Texto"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,help:ascendia_podio.field_city_code
+msgid "The city code."
+msgstr "Código de ciudad."
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_certificate_title
+msgid "Title"
+msgstr "Título"
+
+#. module: ascendia_podio
+#: model:ir.ui.view,arch_db:ascendia_podio.interested_form_view
+msgid "To Student"
+msgstr "Convertir en Alumno"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_total_hours
+msgid "Total hours"
+msgstr "Horas totales del curso"
+
+#. module: ascendia_podio
+#: model:ir.ui.menu,name:ascendia_podio.menu_training_employment
+msgid "Training for Employment"
+msgstr "Formación para Empleo"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_course_url_link
+msgid "Url link"
+msgstr "Enlace particular del curso"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_user_to
+msgid "User to"
+msgstr "Dirigido a"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_ascendia_certificate_formation_year
+msgid "Year"
+msgstr "Año"
+
+#. module: ascendia_podio
+#: model:ir.model.fields,field_description:ascendia_podio.field_student_zip
+msgid "Zip"
+msgstr "C.P."
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_baremation
+msgid "baremation"
+msgstr "baremación"
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_certificate
+msgid "certificate"
+msgstr "certificado"
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_city
+msgid "city"
+msgstr "ciudad"
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_course
+msgid "course"
+msgstr "curso"
+
+#. module: ascendia_podio
+#: model:ir.model,name:ascendia_podio.model_student
+msgid "student"
+msgstr "alumno"
+

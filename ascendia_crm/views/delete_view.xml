@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+		<delete model="ir.ui.menu" id="crm.crm_lead_menu_activities"/>
+		<delete model="ir.ui.menu" id="crm.menu_crm_opportunities"/>
+		<delete model="ir.ui.menu" id="ascendia_price_request.menu_price_request_root"/>
+    </data>
+</odoo>

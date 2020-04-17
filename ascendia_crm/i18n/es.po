@@ -1,0 +1,408 @@
+﻿# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-19 09:33+0000\n"
+"PO-Revision-Date: 2018-02-19 09:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Address"
+msgstr "Dirección"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Appointed by Contributor"
+msgstr "Apuntado por Colaborador"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Appointed by Contributor (Commission)"
+msgstr "Apuntado por Colaborador (Comisión)"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_cnae
+msgid "CNAE"
+msgstr ""
+
+#. module: ascendia_crm
+#: model:ir.actions.act_window,name:ascendia_crm.action_crm_charge
+#: model:ir.ui.menu,name:ascendia_crm.menu_crm_charge
+msgid "CRM Charge"
+msgstr "Encargos"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_can_be_create
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_stage_can_be_create
+msgid "Can be create Price Request"
+msgstr "Marque para Permitir Crear Solicitudes de Precios"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_charge_id
+#: model:ir.ui.view,arch_db:ascendia_crm.view_form_crm_charge
+msgid "Charge"
+msgstr "Encargo"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Check Innovation (Junta de Andalucia)"
+msgstr "Cheque Innovación (Junta de Andalucía)"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "City"
+msgstr "Ciudad"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_close_date
+msgid "Close Date"
+msgstr "Fecha de Cierre"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Commercial Tracking"
+msgstr "Seguimiento Comercial"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_contact_id
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Contact Information"
+msgstr "Información del Contacto"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Country"
+msgstr "Pais"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_request_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Department of Employment, Business and Commerce (Junta de Andalucia)"
+msgstr "Consejería de Empleo, Empresa y Comercio (Junta de Andalucía)"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Ecoinnocamaras (Chamber of Commerce)"
+msgstr "Ecoinnocamaras (Cámara de Comercio)"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Email"
+msgstr "Correo Electrónico"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor_price_request
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_kanban_view_leads_inherit
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_tree_view_oppor_inherit
+#: model:ir.ui.view,arch_db:ascendia_crm.view_create_opportunity_simplified_priority
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_leads_filter_inherit
+msgid "Entity"
+msgstr "Entidad"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Entity Information"
+msgstr "Información de la Entidad"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Entity Name"
+msgstr "Nombre de la Entidad"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_financing
+msgid "Financing"
+msgstr "Financiación"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Follow-up by RRC"
+msgstr "Seguimiento por RRC"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Government of Spain"
+msgstr "Gobierno de España"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_id
+msgid "ID"
+msgstr ""
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Idea Agency (Junta de Andalucia)"
+msgstr "Agencia Idea (Junta de Andalucía)"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Incoming / Web Call"
+msgstr "Llamada Entrante / Web"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Innocamaras (Chamber of Commerce)"
+msgstr "Innocamaras (Cámara de Comercio)"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: ascendia_crm
+#: model:ir.model,name:ascendia_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Oportunidad"
+
+#. module: ascendia_crm
+#: selection:crm.lead,state:0
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_opportunities_filter_redefine
+msgid "Lost"
+msgstr "Perdido"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Mark Open"
+msgstr "Marcar Abierto"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Marketing"
+msgstr ""
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Ministry of the Presidency of the Junta de Andalucia (Junta de Andalucia)"
+msgstr "Consejería de la Presidencia de la Junta de Andalucía (Junta de Andalucía)"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Misc"
+msgstr ""
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_opportunities_filter_redefine
+msgid "My Opportunities"
+msgstr "Mis Oportunidades"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Neotec (Government of Spain)"
+msgstr "Neotec (Gobierno de España)"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "New Price Request"
+msgstr "Crear Solicitud de Precios"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_opportunities_filter_redefine
+msgid "No salesperson"
+msgstr "No Asignada"
+
+#. module: ascendia_crm
+#: selection:crm.lead,state:0
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_opportunities_filter_redefine
+msgid "Open"
+msgstr "Abierta"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_opportunities_filter_redefine
+msgid "Opportunities that are assigned to me"
+msgstr "Mis Oportunidades"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_origin
+msgid "Origin"
+msgstr "Origen"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Others"
+msgstr "Información Adicional"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Others Information"
+msgstr "Otra información"
+
+#. module: ascendia_crm
+#: model:ir.ui.menu,name:ascendia_crm.menu_crm_opportunities_new
+msgid "Pipeline"
+msgstr "Oportunidades"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Price Request"
+msgstr "Solicitud de Precios"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_request_id
+msgid "Price Request Name"
+msgstr "Nombre"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Red.es (Government of Spain)"
+msgstr "Red.es (Gobierno de España)"
+
+#. module: ascendia_crm
+#: model:ir.model,name:ascendia_crm.model_crm_stage
+msgid "Stage of case"
+msgstr "Estado"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_start_date
+msgid "Start Date"
+msgstr "Fecha de Entrada"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_state
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "State"
+msgstr "Provincia"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Street 2..."
+msgstr "Calle 2 ..."
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: ascendia_crm
+#: model:res.groups,name:ascendia_crm.group_super_admin
+msgid "Super Admin"
+msgstr ""
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_charge_tag_ids
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Targeted by the Own Client"
+msgstr "Apuntado por el Propio Cliente"
+
+#. module: ascendia_crm
+#: selection:crm.lead,origin:0
+msgid "Targeted by the Technician"
+msgstr "Apuntado por el Técnico"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_technical_price
+msgid "Technical Price"
+msgstr "Precio del Técnico"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Tic Chambers (Chamber of Commerce)"
+msgstr "Tic Cámaras (Cámara de Comercio)"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "Title"
+msgstr "Título"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_total_gain
+msgid "Total Gain"
+msgstr "Total Ganado"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_total_purchase
+msgid "Total Purchase Price"
+msgstr "Precio de Compra Total"
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_total_sale
+msgid "Total Sale Price"
+msgstr "Precio de Venta Total"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Tripartite Foundation - Fundae (Government of Spain)"
+msgstr "Fundación Tripartita - Fundae (Gobierno de España)"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_opportunities_filter_redefine
+msgid "Unassigned"
+msgstr "No Asignado"
+
+#. module: ascendia_crm
+#: selection:crm.lead,financing:0
+msgid "Without help"
+msgstr "Sin ayuda"
+
+#. module: ascendia_crm
+#: selection:crm.lead,state:0
+#: model:ir.ui.view,arch_db:ascendia_crm.view_crm_case_opportunities_filter_redefine
+msgid "Won"
+msgstr "Ganado"
+
+#. module: ascendia_crm
+#: model:ir.ui.view,arch_db:ascendia_crm.crm_case_form_view_oppor
+msgid "ZIP"
+msgstr ""
+
+#. module: ascendia_crm
+#: model:ir.model,name:ascendia_crm.model_crm_charge
+msgid "crm.charge"
+msgstr ""
+
+#. module: ascendia_crm
+#: model:ir.model.fields,field_description:ascendia_crm.field_crm_lead_technical_ids
+msgid "technical"
+msgstr "Técnicos"
+

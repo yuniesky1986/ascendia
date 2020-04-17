@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ascendia_course,access_ascendia_course,model_course,,1,1,1,1
+access_ascendia_student,access_ascendia_student,model_student,,1,1,1,1
+access_ascendia_city,access_ascendia_city,model_city,,1,1,1,1
+access_ascendia_edition_year,access_ascendia_edition_year,model_ascendia_edition_year,,1,1,1,1
+access_ascendia_certificate_formation,access_ascendia_certificate_formation,model_ascendia_certificate_formation,,1,1,1,1
+access_ascendia_certificate_lopd,access_ascendia_certificate_lopd,model_ascendia_certificate_lopd,,1,1,1,1
+access_ascendia_certificate_good_execution,access_ascendia_certificate_good_execution,model_ascendia_certificate_good_execution,,1,1,1,1
+access_ascendia_baremation,ascendia_baremation,model_baremation,,1,1,1,1
+access_certificate,ascendia_certificate,model_certificate,,1,1,1,1
+access_ascendia_edition_number,access_ascendia_edition_number,model_ascendia_edition_number,,1,1,1,1
+access_ascendia_certificate,access_ascendia_certificate,model_ascendia_certificate,,1,1,1,1

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_order_form_inh_price_request">
+			<field name="name">view.order.form.inh.price.request</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<field name="user_id" position="before">
+                    <field name="price_request_id"
+                           attrs="{'readonly': [('state', '!=', 'draft')]}"
+                           context="{'default_partner_id': partner_id}"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

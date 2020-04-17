@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_project_project_filter2" model="ir.ui.view">
+            <field name="name">project.project.select</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_project_filter"/>
+            <field name="arch" type="xml">
+            	<filter name="Partner" position="after">
+            		<filter string="Progress" name="progress" context="{'group_by':'progress'}"/>
+            	</filter>
+            </field>
+        </record>
+
+    	<record id="task_type_edit_code" model="ir.ui.view">
+            <field name="name">project.task.type.form.code</field>
+            <field name="model">project.task.type</field>
+            <field eval="2" name="priority"/>
+            <field name="inherit_id" ref="project.task_type_edit"/>
+            <field name="arch" type="xml">
+            	<field name="name" position="after">
+            		<field name="code"/>
+            	</field>
+            </field>
+        </record>
+
+        <record id="project_issue_form_view2" model="ir.ui.view">
+            <field name="name">project.issue.form.inherited2</field>
+            <field name="model">project.issue</field>
+            <field eval="2" name="priority"/>
+            <field name="inherit_id" ref="project_issue_sheet.project_issue_form_view"/>
+            <field name="arch" type="xml">
+            	<field name="timesheet_ids" position="replace">
+            		<field name="timesheet_ids" colspan="4" nolabel="1" context="{'default_user_id' : uid, 'default_project_id': project_id}">
+                            <tree editable="top" string="Timesheet Activities">
+                                <field name="date"/>
+                                <field name="user_id" required="1"/>
+                                <field name="name"/>
+                                <field name="project_id" invisible="1" required="1"/>
+                                <field name="unit_amount" string="Duration" widget="float_time"/>
+                            </tree>
+                        </field>
+            	</field>
+            </field>
+        </record>
+
+    	<record id="view_task_form2_domain" model="ir.ui.view">
+            <field name="name">project.task.form.domain</field>
+            <field name="model">project.task</field>
+            <field eval="2" name="priority"/>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+            	<!-- <field name="user_id" position="before">
+            		<field name="user_ids" widget="many2many_tags" invisible="1"/>
+            	</field> -->
+                <field name="user_id" position="before">
+            		<field name="clasification_id" required="1"/>
+            	</field>
+            	<field name="date_deadline" position="before">
+            		<field name="start_date" required="1"/>
+            	</field>
+                <field name="tag_ids" position="after">
+            		<field name="ponderation" required="1"/>
+            	</field>
+            	<field name="user_id" position="attributes">
+                	<!-- <attribute name="domain">[('id', 'in', user_ids[0][2])]</attribute> -->
+                	<attribute name="options">{'no_create': True}</attribute>
+                </field>
+                <!--xpath expr="//page[@name='extra_info']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath-->
+                <!--xpath expr="//notebook/page[@name='extra_info']" position="replace"/-->
+            </field>
+        </record>
+            
+    	<record id="project.open_view_project_all" model="ir.actions.act_window">
+            <field name="name">All Projects</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_project_inherit" model="ir.ui.view">
+            <field name="name">project.project.tree</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project"/>
+            <field name="arch" type="xml">
+                <field name="sequence" position="after">
+                    <field name="state"/>
+                    <field name="business_area"/>
+                </field>
+                <field name="partner_id" position="replace"/>
+                <field name="user_id" position="replace">
+                    <field name="user_ids" widget="many2many_tags"/>
+                    <field name="progress_time" widget="progressbar"/>
+                    <field name="teoric_hours" widget="float_time"/>
+                    <field name="real_hours" widget="float_time"/>
+                    <field name="pending_hours" widget="float_time"/>
+                    <field name="proposal_due_date"/>
+                    <field name="observations"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="edit_project_client" model="ir.ui.view">
+            <field name="name">project.project.form.client</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+				<sheet position="before">
+					<header>
+                        <field name="state" widget="statusbar" clickable="True"/>
+                    </header>
+				</sheet>
+				<field name="partner_id" position="replace"/>
+				<field name="user_id" position="replace"/>
+				<div class="oe_title" position="after">
+                    <group name="general_data">
+                     	<group>
+                     		<field name="start_date" required="1"/>
+                     		<!--field name="next_date"/-->
+                     		<field name="end_date" required="1"/>
+                     		<field name="close_date" invisible="1"/>
+                            <field name="days"/>
+                     		<field name="project_type_id"/>
+                            <field name="business_area"/>
+                     	</group>
+                     	<group>
+                     		<field name="partner_id"
+                     			domain="[('parent_id', '=', False)]"
+                     			required="1"
+                     			string="Entity"/>
+                     		<field name="charge_id"/>
+                     		<field name="proposal_id"
+                     			domain="[('private_state', '=', 'approved'), ('partner_id', '=', partner_id), ('approval_date', '&lt;=', start_date), ('request_date', '&gt;=', end_date)]"
+                     			context="{'default_partner_id': partner_id}"/><!-- required="1" -->
+                     		<!--field name="contact_id"
+                     			domain="[('parent_id', '=', partner_id)]"
+                     			context="{'default_parent_id': partner_id}"/-->
+                   			<field name="user_id" required="1"/>
+                     	</group>
+                    </group>
+                    <group name="technicals">
+                     	<field name="user_ids" widget="many2many_tags" required="1" options="{'no_create': True}"/>
+                     	<!--field name="state_ids" widget="many2many_tags" options="{'no_create': True}"/-->
+                    </group>
+                    <group name="progress_data">
+                        <group attrs="{'invisible': [('allow_timesheets', '=', False)]}">
+                            <field name="teoric_hours" widget="float_time"/>
+                            <field name="real_hours" widget="float_time"/>
+                            <field name="pending_hours" widget="float_time"/>
+                            <field name="progress_time" widget="progressbar"/>
+                            <!--<field name="progress_task" widget="progressbar"/>-->
+                         </group>
+                        <group>
+                            <field name="teoric_visits"/>
+                            <field name="real_visits"/>
+                         </group>
+                    </group>
+                 </div>
+                <xpath expr="//group[@name='misc']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!--xpath expr="//page[@name='emails']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath-->
+                <xpath expr="//notebook" position="inside">
+                    <page name="task" string="Tasks">
+                        <field name="task_ids">
+                            <tree string="Task Lines" edit="1" delete="1" create="1">
+                                <field name="name"/>
+                                <field name="user_id"/>
+                                <field name="planned_hours"/>
+                                <field name="remaining_hours" widget="float_time" sum="Remaining Hours" readonly="1"/>
+                                <field name="stage_id"/>
+                                <field name="progress" widget="progressbar"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="observations" string="Observations">
+                        <field name="observations"/>
+                    </page>
+                </xpath>
+                <field name="message_follower_ids" position="after">
+                    <field name="message_ids" widget="mail_thread"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="project_project_view_form_simplified_client" model="ir.ui.view">
+            <field name="name">project.project.view.form.simplified.client</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+            <field name="arch" type="xml">
+                <group name='options' position="attributes">
+                	<attribute name="invisible">0</attribute>
+                </group>
+                <field name="use_tasks" position="attributes">
+                	<attribute name="invisible">1</attribute>
+                </field>
+                <group name='options' position="inside">
+                    <field name="partner_id"
+                    	domain="[('customer', '=', True), ('parent_id', '=', False)]"
+                    	string="Entity"
+                       	required="True"/>
+                    <field name="start_date" required="1"/>
+                    <field name="next_date"/>
+               		<field name="end_date" required="1"/>
+                    <field name="proposal_id"
+                      	domain="[('private_state', '=', 'approved'), ('partner_id', '=', partner_id), ('approval_date', '&lt;=', start_date), ('request_date', '&gt;=', end_date)]"
+                       	context="{'default_partner_id': partner_id}"
+                       	options="{'no_create': True}"
+                       	required="True"/>
+                 </group>
+            </field>
+        </record>
+        
+        <record id="project_project_view_form_simplified_inherit_issue_client" model="ir.ui.view">
+            <field name="name">project.project.view.form.simplified.inherit.issue.client</field>
+        	<field name="model">project.project</field>
+            <field name="inherit_id" ref="project_issue.project_project_view_form_simplified_inherit_issue"/>
+            <field name="arch" type="xml">
+            	<field name="use_issues" position="replace"/>
+                <field name="name" position="after">
+                	<field name="use_issues"/>
+                	<field name="project_type_id"/>
+                </field>
+            </field>
+       	</record>
+
+        <record id="view_project_project_rating_form2" model="ir.ui.view">
+            <field name="name">project.project.rating.form.view</field>
+            <field name="model">project.project</field>
+            <field eval="2" name="priority"/>
+            <field name="inherit_id" ref="rating_project.view_project_project_rating_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div/button[@name='action_view_task_rating']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='rating_status']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="rating_status" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="rating_status_period" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="//p" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project_invoice_form2" model="ir.ui.view">
+            <field name="name">Inherit project form : Invoicing Data</field>
+        	<field name="model">project.project</field>
+            <field name="inherit_id" ref="hr_timesheet.project_invoice_form"/>
+            <field name="arch" type="xml">
+            	<field name="subtask_project_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+       	</record>
+       	
+       	<record id="project_issue_form_view_redefine" model="ir.ui.view">
+            <field name="name">project.issue.form.view.redefine</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
+            <field name="arch" type="xml">
+            	<field name="project_id" position="replace"/>
+            	<field name="task_id" position="replace"/>
+            	<field name="priority" position="replace"/>
+            	<field name="tag_ids" position="replace"/>
+            	<field name="user_id" position="before">
+            		<field name="user_ids" widget="many2many_tags" invisible="1"/>
+            		<field name="project_id" options="{'no_create': True}"/>
+            		<field name="task_id" options="{'no_create': True}"/>
+            	</field>
+            	<field name="email_from" position="after">
+            		<field name="priority" groups="base.group_user" widget="priority"/>
+                    <field name="tag_ids" widget="many2many_tags"/>
+            	</field>
+            	<field name="user_id" position="attributes">
+                	<attribute name="domain">[('id', 'in', user_ids[0][2])]</attribute>
+                	<attribute name="options">{'no_create': True}</attribute>
+                </field>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="view_ascendia_project_type">
+            <field name="name">view.ascendia.project.type</field>
+            <field name="model">project.type</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="view_form_project_type">
+            <field name="name">view.form.ascendia.project.type</field>
+            <field name="model">project.type</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Project Type">
+                	<div class="oe_title">
+	                    <label for="name"/>
+	                    <h1>
+	                        <field name="name"/>
+	                    </h1>
+	                </div>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_ascendia_project_states">
+            <field name="name">view.ascendia.project.states</field>
+            <field name="model">project.states</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="view_form_project_states">
+            <field name="name">view.form.ascendia.project.states</field>
+            <field name="model">project.states</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Project States">
+                	<div class="oe_title">
+	                    <label for="name"/>
+	                    <h1>
+	                        <field name="name"/>
+	                    </h1>
+	                </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_clasification_task">
+            <field name="name">view.tree.clasification.task</field>
+            <field name="model">clasification.task</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Clasification tasks">
+                    <field name="name"/>
+                    <field name="ponderation"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="view_form_clasification_task">
+            <field name="name">view.form.clasification.task</field>
+            <field name="model">clasification.task</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Clasification task">
+                	<div class="oe_title">
+	                    <label for="name"/>
+	                    <h1>
+	                        <field name="name" required="1"/>
+	                    </h1>
+	                </div>
+                    <group colspan="4">
+                        <group>
+                            <field name="ponderation" string="Ponderation" required="1"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_clasification_task">
+            <field name="name">Clasification Tasks</field>
+            <field name="res_model">clasification.task</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    
+    	<record model="ir.actions.act_window" id="action_project_type">
+            <field name="name">Project Type</field>
+            <field name="res_model">project.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_clasification_tasks"
+    		name="Clasification Tasks"
+            parent="project.menu_project_config"
+            action="action_clasification_task"
+            sequence="15"
+         />
+
+    	<menuitem id="menu_project_type"
+    		name="Project Type"
+            parent="project.menu_project_config"
+            action="action_project_type"
+            sequence="10"
+         />
+         
+         <record model="ir.actions.act_window" id="action_project_states">
+            <field name="name">Project States</field>
+            <field name="res_model">project.states</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    	<menuitem id="menu_project_states"
+    		name="Project States"
+            parent="project.menu_project_config"
+            action="action_project_states"
+            sequence="1"
+         />
+    </data>
+</odoo>

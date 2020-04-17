@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record id="crm_case_form_view_oppor_business_area" model="ir.ui.view">
+            <field name="name">crm.lead.oppor.inherited.crm.business.area</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                	<field name="business_area"/>
+                </field>
+            </field>
+        </record>
+        
+		<record model="ir.ui.view" id="view_order_form_business_area">
+			<field name="name">view.order.form.business.area</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<field name="partner_id" position="after">
+					<field name="business_area"/>
+				</field>
+			</field>
+		</record>
+    </data>
+</odoo>

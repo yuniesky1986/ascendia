@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="view_ascendia_sales_proposal">
+            <field name="name">view.ascendia.sale.proposal</field>
+            <field name="model">ascendia.sale.proposal</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'out_of_date'">
+                    <field name="name"/>
+                    <field name="request_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_form_ascendia_sale_proposal">
+            <field name="name">view.form.ascendia.sale.proposal</field>
+            <field name="model">ascendia.sale.proposal</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Price Request">
+                    <header>
+                        <button string="Pending" type="object"
+                                name="action_pending"
+                                states="draft" class="oe_highlight"/>
+                        <button string="Approved" type="object"
+                                name="action_approved"
+                                states="pending" class="oe_highlight"/>
+                        <button string="Draft" type="object"
+                                name="action_draft"
+                                states="out_of_date,cancel"
+                                class="oe_highlight"/>
+                        <button string="Cancelado" type="object"
+                                name="action_cancel"
+                                states="draft,pending,approved"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                                <label for="name" class="oe_edit_only"/>
+                                <h1>
+                                    <field name="name" required="True"/><!--  attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}" -->
+                                </h1>
+                            </div>
+                        <group colspan="4">
+                            <group>
+                                <field name="partner_id" required="True" attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                <field name="company_type" invisible="1"/>
+                                <field name="contact_id" context="{'default_parent_id': partner_id}"
+                                	attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"
+                                	domain="[('parent_id', '=', partner_id)]"/>
+                                <field name="make_by" required="True" attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                <field name="revised_by" attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                            </group>
+                            <group>
+                            	<field name="approval_date" attrs="{'readonly': [('state', 'not in', ['draft','pending'])]}"/>
+                                <field name="request_date" required="True" attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                <field name="import_template_id"
+                                       domain="[('id','!=',id)]"
+                                       attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                            </group>
+                            <notebook colspan="4">
+                                <page string="Legal Text" invisible="1">
+                                    <field name="legal_text"
+                                           placeholder="Legal Text"
+                                           attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                </page>
+                                <page string="Objetive">
+                                    <field name="objective"
+                                           placeholder="Objective"
+                                           attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                </page>
+                                <page string="Payment Way">
+                                    <field name="payment_way"
+                                           placeholder="Payment Way"
+                                           attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                </page>
+                                <page string="Economic Conditions">
+                                    <group colspan="4">
+                                        <group>
+                                            <field name="include_iva"
+                                            	attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                            <field name="include_outcome"
+                                             	attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                        </group>
+                                        <group>
+                                            <field name="valid_date"
+                                            	attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}"/>
+                                        </group>
+                                        <separator string="Economic Conditions"/>
+                                        <field name="economic_condition"
+                                               placeholder="Economic Conditions"
+                                               nolabel="1"
+                                               attrs="{'readonly': [('state', 'in', ['approved','out_of_date'])]}">
+                                            <tree>
+                                                <field name="text"/>
+                                                <field name="amount"></field>
+                                            </tree>
+                                            <form>
+                                                <group colspan="4">
+                                                    <field name="amount"></field>
+                                                    <field name="text"></field>
+                                                </group>
+                                            </form>
+                                        </field>
+                                    </group>
+                                </page>
+                                <!--<page string="Contacts">-->
+                                    <!--<field name="contact_ids" domain="[('is_company','=',0)]"/>-->
+                                <!--</page>-->
+                                <page string="Sale Orders">
+                                    <field name="sale_order_ids" readonly="1"/>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Control Menu -->
+        <record model="ir.actions.act_window" id="action_sale_proposal">
+            <field name="name">Contract</field>
+            <field name="res_model">ascendia.sale.proposal</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_sale_proposal"
+                  parent="sales_team.menu_sales"
+                  name="Contract"
+                  action="action_sale_proposal"
+                  sequence="12"/>
+
+    </data>
+</odoo>

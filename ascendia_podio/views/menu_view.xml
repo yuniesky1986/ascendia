@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+            id="menu_training_employment"
+            name="Training for Employment"
+            sequence="13"
+            web_icon="ascendia_podio,static/src/img/formation.png"/>
+
+    <menuitem
+            id="menu_training_employment_config"
+            name="Configuration"
+            parent="menu_training_employment"
+            sequence="6"/>
+            
+     <menuitem
+        id="menu_ascendia_marketing"
+        name="Marketing"
+        sequence="14"
+        web_icon="ascendia_podio,static/src/img/marketing.png"/>
+
+</odoo>

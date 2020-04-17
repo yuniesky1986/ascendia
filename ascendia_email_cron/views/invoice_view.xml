@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<record id="view_account_invoice_filter_extension" model="ir.ui.view">
+            <field name="name">account.invoice.select.extension</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <filter domain="[('user_id','=',uid)]" position="after">
+                    <filter string="Pending to pay" name="filter_pending_to_pay" domain="[('pending_to_pay', '=', 1)]"/>
+				</filter>
+            </field>
+        </record>
+        
+        <record id="account.action_invoice_tree2" model="ir.actions.act_window">
+            <field name="name">Vendor Bills</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('type','in',('in_invoice', 'in_refund'))]</field>
+            <field name="context">{'search_default_filter_pending_to_pay': 1, 'default_type': 'in_invoice', 'type': 'in_invoice', 'journal_type': 'purchase'}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+            	<p class="oe_view_nocontent_create">
+                	Click to record a new vendor bill.
+              	</p>
+              	<p>
+                	You can control the invoice from your vendor according to
+                	what you purchased or received.
+              	</p>
+            </field>
+        </record>
+        
+        <record id="purchase.action_invoice_pending" model="ir.actions.act_window">
+	        <field name="name">Vendor Bills</field>
+	        <field name="res_model">account.invoice</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+	        <field eval="False" name="view_id"/>
+	        <field name="domain">[('type','=','in_invoice')]</field>
+	        <field name="context">{'search_default_filter_pending_to_pay': 1, 'default_type':'in_invoice', 'type':'in_invoice', 'journal_type': 'purchase'}</field>
+	        <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+	        <field name="help" type="html">
+	        	<p class="oe_view_nocontent_create">
+	            	Click to create a vendor bill.
+	          	</p>
+	          	<p>
+	            	Use this menu to control the invoices to be received from your
+	            	vendors. When registering a new bill, set the purchase order
+	            	and Odoo will fill the bill automatically according to ordered
+	            	or received quantities.
+	          	</p>
+	        </field>
+	    </record>
+        
+	</data>
+</openerp>

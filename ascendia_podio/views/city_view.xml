@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- City -->
+    <record id="city_tree_view" model="ir.ui.view">
+        <field name="name">city.tree</field>
+        <field name="model">city</field>
+        <field name="arch" type="xml">
+            <tree string="Cities">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="city_form_view" model="ir.ui.view">
+        <field name="name">city.form</field>
+        <field name="model">city</field>
+        <field name="arch" type="xml">
+            <form string="City">
+                <group>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="state_id" options='{"no_open": True}'/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_city" model="ir.actions.act_window">
+        <field name="name">Cities</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">city</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+<!--     <menuitem id="menu_city"
+    	action="action_city"
+        parent="menu_training_employment_config"
+        sequence="1"/> -->
+</odoo>

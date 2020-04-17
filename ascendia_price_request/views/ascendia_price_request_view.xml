@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="view_ascendia_price_request">
+            <field name="name">view.ascendia.price.request</field>
+            <field name="model">ascendia.price.request</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="request_date"/>
+                    <field name="state"/>
+                </tree>
+
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_form_ascendia_price_request">
+            <field name="name">view.form.ascendia.price.request</field>
+            <field name="model">ascendia.price.request</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Price Request">
+                    <header>
+                    	<field name="purchase_state" invisible="True"/>
+                        <button string="Draft" type="object"
+                                name="action_draft"
+                                class="oe_highlight"
+                                attrs="{'invisible': ['|', '|', ('state', 'not in', ['finish', 'canceled'])]}"/>
+                        <button string="Confirm" type="object"
+                                name="action_confirm"
+                                states="draft" class="oe_highlight"/>
+                        <button string="Cancel" type="object"
+                                name="action_cancel"
+                                states="draft" class="oe_highlight"/>
+                        <button name="action_create_purchase_order"
+                                string="Create Purchase Order"
+                                type="object" class="btn-primary"
+                                attrs="{'invisible': ['|', ('state', '!=', 'finish'), ('purchase_order_ids', '!=', [])]}"/>
+                        <button name="action_create_sale_order"
+                                string="Create Sale Order"
+                                type="object" class="btn-primary"
+                                attrs="{'invisible': ['|', '|', ('purchase_state', '=', False), ('state', '!=', 'finish'), ('sale_order_ids', '!=', [])]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                    	<div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group colspan="4">
+                            <group>
+                            	<!-- domain="[('customer', '=', True)]" -->
+                                <field name="client_id" required="True"
+                                	domain="[('is_company', '=', True)]"
+                                	options='{"no_edit": True, "no_create": True}'
+                                   	attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                                <field name="request_date" required="True"
+                                	attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                            </group>
+                            <group>
+                                <field name="responsible_id"
+                                	options='{"no_edit": True, "no_create": True}'
+                                	attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                            </group>
+                            <notebook colspan="4">
+                                <page string="Lines">
+                                    <field name="partner_line_ids" nolabel="1" attrs="{'readonly': [('state', 'not in', ['draft'])]}">
+                                        <tree>
+                                            <field name="supplier_user_id"/>
+                                            <field name="state"/>
+                                            <field name="total_sale"/>
+                                            <field name="total_purchase"/>
+                                            <field name="total_gain"/>
+                                        </tree>
+                                    </field>
+                                    <group class="oe_subtotal_footer oe_right" colspan="2" name="request_price_total">
+		                                <field name="total_sale" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+		                                <field name="total_purchase" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+		                                <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+		                                    <label for="total_gain" />
+		                                    <button name="button_dummy" string="(update)" type="object" class="oe_edit_only oe_link"/>
+		                                </div>
+		                                <field name="total_gain" nolabel="1" class="oe_subtotal_footer_separator" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+		                            </group>
+                                </page>
+                                <page string="Purchase Orders" name="purchase" attrs="{'invisible': [('purchase_order_ids', '=', [])]}">
+                                    <field name="purchase_order_ids" readonly="1"/>
+                                </page>
+                                <page string="Sale Orders" name="sale" attrs="{'invisible': [('sale_order_ids', '=', [])]}">
+                                    <field name="sale_order_ids" readonly="1"/>
+                                </page>
+                            </notebook>
+                            <group colspan="4">
+                                <field name="description" nolabel="1"
+                                	placeholder="Description"
+                                	attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_ascendia_price_request_partner">
+            <field name="name">view.ascendia.price.request.partner</field>
+            <field name="model">ascendia.price.request.partner.line</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Price Request Partner Line">
+                    <sheet>
+                        <group colspan="4">
+                            <group colspan="2" col="2">
+                                <field name="state" invisible="1"/>
+                                <field name="supplier_user_id" required="True"
+                                	options='{"no_edit": True, "no_create": True}'/>
+                            </group>
+                            <notebook colspan="4">
+                                <page string="Lines">
+                                    <field name="line_ids" nolabel="1">
+                                        <tree editable="bottom" string="Items">
+                                        	<field name="state" invisible="1"/>
+                                            <field name="product_id"/>
+                                            <!-- <field name="product_id_inf" readonly="1"/> -->
+                                            <field name="name" required="True"/>
+                                            <!-- <field name="name_inf" readonly="1"/> -->
+                                            <field name="purchase_price" sum='Total Purchase Price'/>
+                                            <field name="sale_price" sum='Total Sale Price'/>
+                                            <field name="quantity" sum='Total Product'/>
+                                            <field name="total_sale" sum='Total Sale Price'/>
+                                            <field name="total_purchase" sum='Total Purchase Price'/>
+                                            <field name="total_gain" sum='Total Gain'/>
+                                        </tree>
+                                    </field>
+                                    <field name="notes" nolabel="1" placeholder="Notes"></field>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Control Menu -->
+        <menuitem id="menu_purchase_control" name="Control"
+			parent="purchase.menu_purchase_root" sequence="4"/>
+			
+        <record model="ir.actions.act_window" id="action_price_request">
+            <field name="name">Price Request</field>
+            <field name="res_model">ascendia.price.request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem id="menu_price_request_root"
+        	name="Price Request" sequence="10"/>
+        
+        <menuitem id="menu_price_request"
+                  parent="menu_price_request_root"
+                  name="Price Request"
+                  action="action_price_request"/>
+
+    </data>
+</odoo>

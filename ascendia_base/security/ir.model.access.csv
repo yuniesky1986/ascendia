@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_ascendia_activity_sector,access_ascendia_activity_sector,model_ascendia_activity_sector,,1,1,1,1
+access_ascendia_ascendia,access_ascendia_ascendia,model_ascendia_ascendia,,1,1,1,1
+access_ascendia_department,access_ascendia_department,model_ascendia_department,,1,1,1,1

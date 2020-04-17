@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_specific_css" name="assets_specific_css" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link href="/ascendia_financial/static/src/css/report2.css" rel="stylesheet"/>
+        </xpath>
+    </template>
+
+</odoo>

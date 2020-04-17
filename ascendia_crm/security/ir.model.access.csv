@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_stage_root,crm.stage.root,crm.model_crm_stage,ascendia_crm.group_super_admin,1,1,1,1
+access_crm_charge,crm.charge.root,ascendia_crm.model_crm_charge,,1,1,1,1

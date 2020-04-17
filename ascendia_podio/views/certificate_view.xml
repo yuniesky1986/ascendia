@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Certificate -->
+    <record id="certificate_tree_view" model="ir.ui.view">
+        <field name="name">certificate.tree</field>
+        <field name="model">certificate</field>
+        <field name="arch" type="xml">
+            <tree string="Certificates">
+                <field name="title"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="certificate_form_view" model="ir.ui.view">
+        <field name="name">certificate.form</field>
+        <field name="model">certificate</field>
+        <field name="arch" type="xml">
+            <form string="Certificate">
+                <sheet>
+                    <group>
+                        <field name="title"/>
+                    </group>
+                    <notebook>
+                        <page string="Tasks">
+                            <group>
+                                <field name="task_ids" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_certificates" model="ir.actions.act_window">
+        <field name="name">Certificates</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">certificate</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <menuitem action="action_certificates"
+              id="menu_certificates"
+              parent="menu_training_employment"
+              sequence="5"/>
+
+</odoo>

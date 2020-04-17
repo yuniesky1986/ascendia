@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="task.menu.template">
+        <li class="o_mail_navbar_item">
+            <a href="/web#view_type=kanban&amp;model=project.task&amp;action=project.action_view_task" title="Task">
+            	<i class='fa fa-tasks fa-4x'/>
+            </a>
+        </li>
+    </t>
+
+</templates>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <report
+                id="action_proposal_document"
+                model="ascendia.sale.proposal"
+                string="Proposal Document"
+                report_type="qweb-pdf"
+                name="ascendia_sales_proposal.report_proposal"
+                file="ascendia_sales_proposal.report_proposal"
+                attachment_use="True"
+                attachment="object.name+'.pdf'"
+        />
+
+        <record forcecreate="True" id="proposal_document_format" model="report.paperformat">
+            <field name="name">Proposal Reporting Paperformat</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">12</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="action_proposal_document" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="proposal_document_format"/>
+        </record>
+
+        <template id="report_proposal_document">
+            <!--t t-call="ascendia_sales_proposal.external_layout_contract"-->
+                 <t t-set="o" t-value="doc.with_context({'lang':doc.partner_id.lang})"/>
+
+                    <div class="page">
+                        <p style="page-break-before:always;"></p>
+
+                         <p>
+                             <div class="container text-center" style="margin-top:20px">
+                                  <img src="/ascendia_sales_proposal/static/src/img/barra.png" style="width:100%;"/>
+                              </div>
+
+                             <br/><br/><br/><br/><br/><br/><br/><!--br/><br/-->
+
+                            <div style="padding-top: 10%;width:100%;">
+                                <div
+                                     style="background-image: url('/ascendia_sales_proposal/static/src/img/presentation.png'); background-size:100% auto;height: 400px;padding-top: 100px;">
+                                    <div class="col-xs-2">
+                                    </div>
+                                </div>
+                            </div><br/>
+
+                            <div class="container text-center">
+                                <div class="col-md-3" style="font-size:24px;padding-left: 240px;">
+                                    <span t-esc="o._get_date()"/>
+                                </div>
+                            </div>
+
+                             <br/><br/><br/><br/><br/><br/><br/><br/>
+                            <br/><br/><br/><br/><br/><!--br/><br/-->
+
+                             <div class="container text-right" style="color:#1c4eef;padding-right: 14px;font-family: Verdana;">
+                                <p>
+                                    <h5><a href="http://www.ascendiarc.com" target="_blank"><span t-esc="o._get_website()"/></a></h5>
+                                </p>
+                                <p>
+                                    <h5><a href="http://www.ascendiarc.com" target="_blank"><span t-field="o.make_by.company_id.phone"/></a></h5>
+                                </p>
+                                <p>
+                                    <h5><a href="http://www.ascendiarc.com" target="_blank"><span t-esc="o._get_email()"/></a></h5>
+                                </p>
+                             </div>
+
+                             <div class="container text-center">
+                                  <img src="/ascendia_sales_proposal/static/src/img/barra.png" style="width:100%;"/>
+                              </div>
+
+                            </p>
+
+                        <div class="text-center">
+                            <div class="col-xs-6"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-top: 10px;">
+                                <h5><a href="http://www.ascendiarc.com" target="_blank"><span t-esc="o._get_website()"/></a></h5>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <img src="/ascendia_sales_proposal/static/src/img/ascendialogo.jpg" style="width:50%;"/>
+                            </div>
+                        </div>
+
+                        <br/><br/><br/><!--br/><br/-->
+
+                        <div class="text-left">
+                            <h4><strong style="font-size:22px;padding-left: 13px;">REUNIDOS</strong></h4>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>De una parte, don <strong>Francisco de Cárdenas Domínguez - Adame</strong>, mayor de edad, con DNI 52.268.009-A,
+                                domicilio a efectos de notificaciones en <span style="font-style:italic;">Camino de los Descubrimiento</span>, nº 11 - Planta 2ª, 41092,
+                                Sevilla.</h5>
+                        </div>
+
+                        <div class="col-md-3 text-justify" t-if="o.contact_id">
+                            <h5>Y, de otra, don <strong><span t-field="o.contact_id.name"/></strong>, mayor de edad, con DNI <span t-field="o.contact_id.dni"/>,
+                                y con domicilio a efectos de notificaciones en <span t-field="o.contact_id.street"/>.
+                            </h5>
+                            <!--span t-esc="o._get_other_part()"/-->
+                        </div>
+                        <div class="col-md-3 text-justify" t-if="not o.contact_id">
+                            <h5>Y, de otra, don <strong><span t-field="o.partner_id.name"/></strong>, mayor de edad, con DNI -,
+                                y con domicilio a efectos de notificaciones en <span t-field="o.partner_id.street"/>.
+                            </h5>
+                        </div><br/>
+
+                        <div class="text-left">
+                            <h4><strong style="font-size:22px;padding-left: 13px;">INTERVIENEN</strong></h4>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>El primero como, en nombre y representación de  <strong>ASCENDIA REINGENIERÍA Y CONSULTING S.L.</strong>,
+                                con CIF B-91407510, con domicilio a efectos de notificaciones en <span style="font-style:italic;">Camino de los Descubrimiento</span>,
+                                11, 41.092 - Sevilla, e interviniendo aquél en dicho nombre y representación en virtud de
+                                Escritura de poder otorgada ante el Notario don Luis Barriga, miembro del Ilustre Colegio de Andalucía,
+                                con fecha 29 de Noviembre de 2004, y con número de protocolo. En adelante, como <strong>ascêndia
+                                reingenieria + consultoria</strong> y como <strong>prestador/ prestadora</strong>.
+                            </h5>
+                        </div>
+
+                        <div class="col-md-3 text-justify">
+                            <h5>"Y, el segundo, en nombre y representación de <strong><span t-field="o.partner_id.name"/></strong>, con CIF <span t-field="o.partner_id.partner_nif"/>,
+                                con domicilio a efectos de notificaciones en <span t-field="o.partner_id.street"/>, . En adelante como cliente."
+                            </h5>
+                        </div>
+
+                        <div class="col-md-3 text-justify">
+                            <h5>Asimismo, ambas también nombradas como <strong>partes</strong> y/o <strong>contratantes</strong>.</h5>
+                        </div>
+
+                        <div class="col-md-3 text-justify">
+                            <h5>Ambas se reconocen expresa y recíprocamente capacidad y facultades legales suficientes para la
+                                formalización del presente contrato, lo que llevan a efecto y.</h5>
+                        </div><br/>
+
+                        <div class="text-left">
+                            <h4><strong style="font-size:22px;padding-left: 13px;">EXPONEN</strong></h4>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>PRIMERO.-</strong> Que la prestadora tiene como actividades principales los servicios de formación,
+                                asesoramiento y consultoria de gestión y producción enfocados a aumentar la competitividad
+                                y la eficiencia de los sistemas aplicados, servicios de publicidad, relaciones públicas y
+                                similares, explotación electrónica por cuenta de terceros y servicios integrales de correos
+                                y telecomunicaciones.
+                            </h5>
+                            <h5><strong>SEGUNDO.-</strong> Que el cliente tiene intención de contratar parte de los servicios que desarrolla
+                                el prestador en su actividad.
+                            </h5>
+                            <h5><strong>TERCERO.-</strong> Que ambas partes tienen intención de celebrar de un contrato de prestación de servicios.
+                            </h5>
+                            <h5><strong>CUARTO.-</strong> Que en virtud de las consideraciones precedentes, las partes, de sus libres y espontáneas
+                                voluntades, han acordado otorgar este CONTRATO DE PRESTACION DE SERVICIOS , en adelante <strong>el contrato</strong>,
+                                con sujeción a las siguientes.
+                            </h5>
+                        </div><br/>
+
+                        <div class="text-left">
+                            <h4><strong style="font-size:22px;padding-left: 10px;">CLÁUSULAS</strong></h4>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>1.- OBJETO</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>El objeto del contrato es:</h5>
+                        </div>
+                        <div class="col-md-12 text-justify"  t-raw="o.objective"></div>
+
+                        <div class="col-md-3 text-justify">
+                            <h5>Ambas partes reconocen expresamente que ascêndia reingenieria + consultoria se limitará a la
+                                implantación de dicho servicio previo desarrollo del proyecto, correspondiendo la ejecución y
+                                desarrollo del mismo al cliente. Por tanto, y de conformidad con la <strong>CLÁUSULA 9</strong> de este contrato,
+                                la responsabilidad en el desarrollo de lo contratado y sus hitos temporales será de la entidad
+                                ascêndia reingenieria + consultoria siendo de cuenta y riesgo del cliente, receptor del proyecto
+                                en su integridad, la ejecución y desarrollo del sistema implantado así como su mantenimiento y
+                                las sucesivas adecuaciones.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong >2.- DURACIÓN</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Los servicios que en virtud de este contrato prestará ascêndia reingenieria + consultoria,
+                                comenzarán el <span t-esc="o._get_approval_date()"/>, y finalizarán el <span t-esc="o._get_request_date()"/>.
+                            </h5>
+                            <h5>Podrá variarse la entrega o implantación definitiva del proyecto o encargo desarrollado en
+                                el caso de que por operatividad y seguridad en la implementación del proyecto hubiere de
+                                dilatar o espaciar la ejecución de las fases proyectadas.
+                            </h5>
+                        </div>
+                        <div t-if="not o.objective">
+                            <br/><br/><br/><br/><!--br/><br/><br/-->
+                        </div>
+                        <div t-if="o.objective">
+                            <br/><br/><br/><br/><br/>
+                        </div>
+
+                        <div class="row text-center" style="padding-left: 13px;padding-right: 14px;">
+                            <div class="col-xs-4"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-left: 13px;">
+                                <h5><span style="color: #5388bd;" t-esc="o._get_email()"/></h5>
+                            </div>
+                            <div class="col-xs-4 text-center" style="padding-top: 25px;font-family: Verdana;">
+                                <h5>1</h5>
+                            </div>
+                            <div class="col-xs-4 text-right" style="color: #5388bd;padding-right: 14px;font-family: Verdana;">
+                                <h5>TELÉFONO: <span t-field="o.make_by.company_id.phone"/></h5>
+                            </div>
+                        </div>
+                        <br/><!--br/-->
+
+                        <div class="text-center">
+                            <div class="col-xs-6"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-top: 10px;">
+                                <h5><a href="http://www.ascendiarc.com" target="_blank"><span t-esc="o._get_website()"/></a></h5>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <img src="/ascendia_sales_proposal/static/src/img/ascendialogo.jpg" style="width:50%;"/>
+                            </div>
+
+                        </div>
+
+                        <br/><br/><br/><!--br/><br/-->
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>3.- PRECIO</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Ambas partes acuerdan fijar el precio del presente contrato en <span t-esc="o._get_total_amount_untaxed()"/> euros.
+                            </h5>
+                            <h5>Este precio establecido en el presente contrato no incluye los impuestos que según la
+                                legislación sean aplicables.
+                            </h5>
+                            <h5>Asimismo, este precio está establecido solo a los efectos de la prestación del servicio que es
+                                objeto del presente contrato, por lo que en el supuesto de modificar o ampliar los servicios
+                                objeto del mismos, los resultantes de la modificación o ampliación no se entenderán incluidos
+                                dentro del precio, sin perjuicio de que las partes acuerden la modificación de este contrato o
+                                la celebración de otro distinto para los servicios no comprendidos en el precio.
+                            </h5>
+                            <h5>El cliente abonará el total de los honorarios de la siguiente forma:
+                            </h5>
+                            <div class="col-md-12"  t-raw="o.payment_way"></div>
+                            <h5>Asimismo, en caso de impago o retraso en el pago, ascêndia reingenieria + consultoria se reserva
+                                el derecho de suspender temporalmente los servicios prestados al cliente con o sin previo aviso.
+                                Transcurridos un máximo de 30 días desde la suspensión temporal, ascêndia reingenieria + consultoria
+                                podrá dar por cancelado todos los servicios contratados por el cliente.
+                            </h5>
+                            <h5>Respecto a los casos de posible suspensión de los servicios, ascêndia reingenieria + consultoria
+                                no se responsabiliza de las consecuencias que pudieran resultar a raíz de la desactivación o
+                                suspensión temporal o definitiva de los servicios prestados debido a un impago, retraso en el
+                                pago, devolución de recibos bancarios o retrotracciones de cargos en tarjetas de crédito.
+                            </h5>
+                            <h5>En todo caso, ambas partes convienen expresamente que ascêndia reingenieria + consultoria pueda
+                                reservarse el derecho a aplicar un recargo mensual del 3 % ante mora o retraso en el pago,
+                                aplicado desde la fecha de vencimiento de este.
+                            </h5>
+                            <h5>Los gastos en los que se pudiera incurrir tales como gastos de viaje, desplazamiento fuera de las
+                                dependencias del cliente, etc, serán abonados con carácter previo a la misma cuenta corriente de abono
+                                de los honorarios. El prestador se reserva el derecho a modificar y aumentar el precio final del
+                                proyecto o encargo realizado, incluyendo los mismos, en el caso de no abono en la forma anteriormente
+                                indicada. La firma del presente contrato supone expresa aceptación de esta forma de pago indicada y
+                                para el supuesto referido.
+                            </h5>
+                        </div><!--br/-->
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>4.- DESISTIMIENTO UNILATERAL DEL CONTRATO POR PARTE DE UNO DE LOS CONTRATANTES</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>En caso de que el cliente decidiera de forma unilateral desistir de la prestación del servicio
+                                objeto de este contrato en cualquiera de los pagos comprometidos y/o antes de la finalización
+                                de los mismos (respectivamente), ascêndia reingenieria + consultoria no reintegrará los importes
+                                ya pagados por el cliente a la fecha de desistimiento.
+                            </h5>
+                            <h5>No obstante, si a la fecha de desistimiento unilateral por el cliente, los servicios prestados
+                                hasta entonces tengan un coste de precio superior al ya facturado,  ascêndia reingenieria + consultoria
+                                facturará el exceso de coste al cliente, quien  se compromete expresamente a abonarla.
+                            </h5>
+                            <h5>En caso de que a dicha fecha existieran cuantías pendientes de pago sobre trabajos o servicios ya
+                                realizados  el cliente se compromete, también expresamente, a abonarlas como parte de la liquidación
+                                final de los servicios objeto del contrato.
+                            </h5>
+                            <h5>En el eventual caso de que ascêndia reingenieria + consultoria cancelase o suspendiese el servicio o
+                                los trabajos contratados sin que el cliente así lo hubiera acordado, reintegrará al mismo los importes
+                                pagados correspondientes a la parte proporcional del periodo no consumido o de los servicios no prestados,
+                                previa verificación por los técnicos de la prestadora de la parte pendiente de ejecución.
+                            </h5>
+                        </div><!--br/-->
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>5.- MODIFICACIONES Y/O AMPLIACIÓN DE LOS SERVICIOS OBJETO DEL PRESENTE CONTRATO POR PARTE DEL PRESTADOR</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>ascêndia reingenieria + consultoria se reserva, y así lo reconoce expresamente el cliente, el derecho
+                                a modificar, en cualquier modo, las características de sus servicios con el fin de adaptarlas a la
+                                legislación vigente en cada momento, a la evolución de la tecnología, para evitar usos ilícitos o
+                                fraudulentos del servicio, para ofrecer productos y servicios de calidad, y para adaptarlas a las
+                                obligaciones técnicas contraídas con terceros y que resulten esenciales para la prestación de los
+                                servicios. Las nuevas características de los servicios se entenderán plenamente vigentes entre las
+                                partes y sustituyendo a las anteriores, pasando a comunicarse mediante aviso a través
+                                <a href="http://www.ascendiarc.com" target="_blank">www.ascêndiarc.com</a>
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>6.- INEXISTENCIA DE RELACIÓN LABORAL ENTRE LAS PARTES CONTRATANTES</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Las partes establecen de forma expresa que entre las mismas no existe relación laboral alguna
+                                entre las personas de ambas empresas que colaboren en el desarrollo y/o puesta en marcha del
+                                servicio contratado. La colaboración e implementación de la prestación del servicio mediante
+                                uso y disposición de medios comunes de producción no se entenderá, en ningún caso, causa de
+                                sucesión o subrogación laboral. En dicho sentido, el Prestador manifiesta que el servicio objeto
+                                de este contrato será prestado por su personal, estando éste contratado conforme a las leyes y
+                                cumpliendo con todas las obligaciones laborales y de Seguridad Social que consagran aquéllas.
+                            </h5>
+                        </div>
+
+                        <div t-if="not o.objective">
+                            <br/><br/><br/><br/><br/>
+                        </div>
+                        <div t-if="o.objective">
+                            <br/><br/><br/>
+                        </div>
+
+                        <div class="row text-center" style="padding-left: 13px;padding-right: 14px;">
+                            <div class="col-xs-4"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-left: 13px;">
+                                <h5><span style="color: #5388bd;" t-esc="o._get_email()"/></h5>
+                            </div>
+                            <div class="col-xs-4 text-center" style="padding-top: 25px;font-family: Verdana;">
+                                <h5>2</h5>
+                            </div>
+                            <div class="col-xs-4 text-right" style="color: #5388bd;padding-right: 14px;font-family: Verdana;">
+                                <h5>TELÉFONO: <span t-field="o.make_by.company_id.phone"/></h5>
+                            </div>
+                        </div>
+                        <br/><!--br/-->
+
+                        <div class="text-center">
+                            <div class="col-xs-6"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-top: 10px;">
+                                <h5><a href="http://www.ascendiarc.com" target="_blank"><span t-esc="o._get_website()"/></a></h5>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <img src="/ascendia_sales_proposal/static/src/img/ascendialogo.jpg" style="width:50%;"/>
+                            </div>
+                        </div>
+
+                        <br/><br/><br/><!--br/><br/-->
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>7.- CESIÓN DEL CONTRATO</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Ambas partes pactan expresamente que ninguna de ellas  podrá ceder a terceros el presente contrato
+                                sin el consentimiento expreso y por escrito de la otra parte.
+                            </h5>
+                            <h5>En caso de cesión no consentida del contrato por parte del cliente a un tercero ajeno a este negocio
+                                jurídico, dará derecho a la parte prestadora a la resolución contractual unilateral con reclamación
+                                de indemnización por daño y perjuicio. La prestadora del servicio se hace expresa reserva de acciones
+                                en este supuesto y a tal fin.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>8.- RESPONSABILIDAD DE LA PRESTADORA EN LA EJECUCIÓN Y DESARROLLO POR EL CLIENTE DE LOS SERVICIOS PRESTADOS</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Una vez finalizada la prestación de los servicios que son objeto del presente contrato, y consistiendo dichos
+                                servicios en la implantación de determinados sistemas de calidad, ambas partes acuerdan, de manera expresa,
+                                que la prestadora está exenta de toda responsabilidad por la ejecución y desarrollo de los sistemas implantados,
+                                por corresponder la referida ejecución y el referido desarrollo al cliente. Del mismo, serán de responsabilidad
+                                del cliente las consecuencias derivadas de que el desarrollo o ejecución del/los sistema/s se haga/n defectuosa
+                                o incompletamente. En dicho sentido, el cliente exime de toda responsabilidad a  ascêndia
+                                reingenieria + consultoria respecto a la ejecución y al desarrollo del/los sistema/s de calidad implantado/s.
+                            </h5>
+                            <h5>En caso de cesión no consentida del contrato por parte del cliente a un tercero ajeno a este negocio
+                                jurídico, dará derecho a la parte prestadora a la resolución contractual unilateral con reclamación
+                                de indemnización por daño y perjuicio. La prestadora del servicio se hace expresa reserva de acciones
+                                en este supuesto y a tal fin.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>9.- CONFIDENCIALIDAD</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Las partes contratantes se comprometen de manera expresa a no revelar las informaciones relativas
+                                a este contrato y a los servicios que son objeto de él. Dicha obligación  persistirá, no solo
+                                durante la vigencia del contrato, sino también con posterioridad a la finalización del mismo.
+                            </h5>
+                            <h5>En tal sentido, ambas partes se comprometen expresamente a suscribir un acuerdo de confidencialidad
+                                que se acompaña a este contrato como <strong>ANEXO 1</strong>.
+                            </h5>
+                            <h5>Dicho anexo es parte integrante e inherente a este contrato, siendo firmado de igual forma por las
+                                partes y teniendo el mismo carácter obligaciones que el contrato principal.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>10.- RESOLUCIÓN DEL CONTRATO</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Sin perjuicio de lo dispuesto de manera específica en otras cláusulas de este contrato, el incumplimiento
+                                por cualquiera de las partes de las obligaciones establecidas a lo largo del mismo, dará derecho a la
+                                parte que hubiere cumplido las suyas a optar, dentro de los quince (15) días naturales desde la
+                                comunicación del incumplimiento a la parte infractora, entre exigir <strong>1)</strong> el cumplimiento forzoso del
+                                contrato, requiriendo a la parte infractora para la corrección, o <strong>2)</strong> la resolución del contrato,
+                                en ambos casos con indemnización de los daños y perjuicios que dicho incumplimiento haya ocasionado.
+                            </h5>
+                            <h5>Causas de resoluciones específicas:
+                            </h5>
+                            <h5>- obstaculización o dificultación en el desarrollo del proyecto haciendo el cliente inviable la implantación en la empresa.
+                            </h5>
+                            <h5>- incumplimiento de un cualquiera de los pagos del precio durante la vigencia del contrato.
+                            </h5>
+                            <h5>- facilitación de información falsa que lleve a error a la prestadora del servicio en la creación del proyecto a implementar.
+                            </h5>
+                            <h5>- confusión intencionada de plantilla.
+                            </h5>
+                            <h5>- declaración de concurso de acreedores de cualquiera de las dos partes contratantes.
+                            </h5>
+                            <h5>- retraso injustificado en la entrega de la prestación del servicio.
+                            </h5>
+                            <h5>- incumplimiento por cualquiera de las partes del pacto de confidencialidad reflejado en el
+                                anexo I durante la vigencia del contrato, sin perjuicio de las consecuencias del incumplimiento
+                                del pacto de confidencialidad del anexo I tras la finalización del contrato.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>11.- CARÁCTER INDEPENDIENTE DE LAS CLÁUSULAS</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Si cualquier órgano jurisdiccional o administrativo competente determinara que cualquiera
+                                de las cláusulas de este contrato, o su aplicación en cualquier circunstancia es inexigible,
+                                nula o ilegal, dicha cláusula se entenderá eliminada de este contrato o no aplicable en esa
+                                circunstancia, según los casos, sin que ello afecte a la exigibilidad, validez y legalidad
+                                de las demás cláusulas del contrato. En todo caso, las partes negociarán de buena fe para
+                                acordar términos sustitutivos que sean exigibles, válidos y legales y consecuentes con la
+                                intención original de las partes.
+                            </h5>
+                        </div>
+
+                        <div t-if="not o.objective">
+                            <br/><br/><br/><br/>
+                        </div>
+                        <div t-if="o.objective">
+                            <br/><!--br/-->
+                        </div>
+
+                        <div class="row text-center" style="padding-left: 13px;padding-right: 14px;">
+                            <div class="col-xs-4"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-left: 13px;">
+                                <h5><span style="color: #5388bd;" t-esc="o._get_email()"/></h5>
+                            </div>
+                            <div class="col-xs-4 text-center" style="padding-top: 25px;font-family: Verdana;">
+                                <h5>3</h5>
+                            </div>
+                            <div class="col-xs-4 text-right" style="color: #5388bd;padding-right: 14px;font-family: Verdana;">
+                                <h5>TELÉFONO: <span t-field="o.make_by.company_id.phone"/></h5>
+                            </div>
+                        </div>
+                        <br/>
+
+                        <div class="text-center">
+                            <div class="col-xs-6"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-top: 10px;">
+                                <h5><a href="http://www.ascendiarc.com" target="_blank"><span t-esc="o._get_website()"/></a></h5>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <img src="/ascendia_sales_proposal/static/src/img/ascendialogo.jpg" style="width:50%;"/>
+                            </div>
+                        </div>
+
+                        <br/><br/><br/><br/><!--br/-->
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>12.- INTERPRETACIÓN DEL CONTRATO CON RESPETO A LAS REGLAS DE LA BUENA FE</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Las partes convienen expresamente en interpretar el presente contrato con respeto a las reglas de buena fe.
+                            </h5>
+                            <h5>En todo caso, dichas reglas tendrán especial importancia si alguna palabra o expresión de este contrato
+                                contuviera algún error involuntario en la redacción de las mismas.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>13.- ELEVACIÓN A PÚBLICO DEL PRESENTE CONTRATO E IMPUESTOS</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Si las partes decidieran elevar a escritura pública este contrato, todos los gastos de elevación
+                                a público y los impuestos que se devenguen serán soportados por ambas partes por mitad.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>14.- NOTIFICACIONES</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>Todas las notificaciones, requerimientos, peticiones y otras comunicaciones que hayan de efectuarse
+                                por las partes en relación con el presente contrato, deberán realizarse por escrito y se entenderá
+                                que han sido debidamente realizadas cuando hayan sido entregados en mano o bien remitidos por correo
+                                certificado al domicilio de la otra parte que conste en el encabezamiento del presente contrato, o
+                                bien a cualquier otro domicilio que a estos efectos cada parte pueda indicar a la otra.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>15.- LEY APLICABLE Y FUERO</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>El presente contrato se regirá e interpretará de acuerdo con las Leyes de España.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>16.- EFICACIA VINCULANTE</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5>El presente contrato tendrá plena eficacia vinculante para las partes.
+                            </h5>
+                            <h5>Para la resolución de cualquier cuestión relacionada con la validez, interpretación
+                                y cumplimiento del presente contrato, las partes se someten a la jurisdicción de los
+                                Juzgados y Tribunales que imperativamente designen las leyes.
+                            </h5>
+                            <h5>Y para que así conste, ambas partes firman dos ejemplares del presente contrato en la
+                                fecha y lugar indicados en el encabezamiento del mismo.
+                            </h5>
+                        </div><br/>
+
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>17.- PROTECCIÓN DE DATOS</strong></h5>
+                        </div>
+                        <div class="col-md-3 text-justify">
+                            <h5><strong>Responsable del tratamiento:</strong> ASCENDIA REINGENIERIA Y CONSULTING, S.L. <strong>Finalidad del tratamiento:</strong>
+                                Realizar la gestión de la relación comercial entre las partes y la gestión fiscal y administrativa
+                                de nuestros clientes. <strong>Base de legitimación:</strong> Ejecución de un contrato <strong>Destinatarios:</strong> No se cederán
+                                datos a terceros, salvo disposición legal. La empresa utiliza servicios de alojamiento externo,
+                                en cloud, con Google, que conlleva una transferencia internacional de datos, que se encuentra al
+                                amparo del acuerdo EU-US Privacy Shield, información disponible en <a href="http://www.privacyshield.gov" target="_blank">www.privacyshield.gov</a>.
+                                <strong>Derechos:</strong> Tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos,
+                                como se explica en la información adicional <strong>Información adicional:</strong> Puede consultar la información
+                                adicional y detallada sobre Protección de Datos dirigiéndose a la siguiente dirección email <span style="color: #5388bd;" t-field="o.make_by.company_id.email"/>
+                            </h5>
+                        </div>
+                        <br/><br/><br/>
+                        <div class="row">
+                            <div class="col-xs-6" style="text-align: center;font-size:22px">
+                                <p><strong>El Prestador</strong></p>
+                            </div>
+                            <div class="col-xs-6" style="text-align: center;font-size:22px">
+                                <p><strong>El Cliente</strong></p>
+                            </div>
+                        </div>
+
+                        <t t-if="not o.objective">
+                            <br/><br/><br/><br/><br/><br/><br/><br/>
+                        </t>
+                        <t t-if="o.objective">
+                            <br/><br/><br/><br/><br/><br/><br/><!--br/><br/><br/-->
+                        </t>
+
+                        <div class="row text-center" style="padding-left: 13px;padding-right: 14px;padding-bottom: 5px;">
+                            <div class="col-xs-4"  style="text-align:left;color: #0e2676;font-family: Verdana;font-size:20px;padding-left: 13px;">
+                                <h5><span style="color: #5388bd;" t-esc="o._get_email()"/></h5>
+                            </div>
+                            <div class="col-xs-4 text-center" style="padding-top: 25px;font-family: Verdana;">
+                                <h5>4</h5>
+                            </div>
+                            <div class="col-xs-4 text-right" style="color: #5388bd;padding-right: 14px;font-family: Verdana;">
+                                <h5>TELÉFONO: <span t-field="o.make_by.company_id.phone"/></h5>
+                            </div>
+                        </div>
+
+                    </div>
+                <!--/t-->
+        </template>
+
+        <template id="report_proposal">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="ascendia_sales_proposal.report_proposal_document"
+                       t-lang="doc.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</openerp>

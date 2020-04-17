@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	
+    	<record id="view_task_search_crm_form" model="ir.ui.view">
+            <field name="name">project.task.search.crm.form</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+               <search string="Tasks">
+                    <field name="name" string="Tasks"/>
+                    <field name="tag_ids"/>
+                    <field name="partner_id"/>
+                    <field name="lead_id"/>
+                    <field name="sale_order_id"/>
+                    <field name="request_id"/>
+                    <field name="proposal_id"/>
+                    <field name="product_id"/>
+                    <field name="assigned_partner_id"/>
+                    <field name="user_id"/>
+                    <field name="stage_id"/>
+                    <filter string="My Tasks" name="my_tasks" domain="[('user_id','=',uid)]"/>
+                    <filter string="Unassigned" name="unassigned" domain="[('user_id', '=', False)]"/>
+                    <separator/>
+                    <filter string="New" name="draft" domain="[('stage_id.sequence', '&lt;=', 1)]"/>
+                    <separator/>
+                    <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Responsible" name="user_id" context="{'group_by':'user_id'}"/>
+                        <filter string="Created by" name="created_by" context="{'group_by':'create_uid'}"/>
+                        <filter string="Lead" name="lead" context="{'group_by':'lead_id'}"/>
+                        <filter string="Sale Order" name="sale_order" context="{'group_by':'sale_order_id'}"/>
+                        <filter string="Request" name="request" context="{'group_by':'request_id'}"/>
+                        <filter string="Proposal" name="proposal" context="{'group_by':'proposal_id'}"/>
+                        <filter string="Product" name="product" context="{'group_by':'product_id'}"/>
+                        <filter string="Partner" name="partner_ass" context="{'group_by':'assigned_partner_id'}"/>
+                        <filter string="Deadline" name="deadline" context="{'group_by':'date_deadline'}"/>
+                        <filter string="Stage" name="Stage" context="{'group_by':'stage_id'}"/>
+                        <filter string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<record id="action_view_crm_task" model="ir.actions.act_window">
+            <field name="name">Tasks</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+            <field name="context">{'search_default_my_tasks': 1}</field>
+            <field name="domain">['|', '|', '|', '|', '|', ('lead_id', '!=', False), ('sale_order_id', '!=', False), ('request_id', '!=', False), ('proposal_id', '!=', False), ('product_id', '!=', False), ('assigned_partner_id', '!=', False)]</field>
+            <field name="search_view_id" ref="view_task_search_crm_form"/>
+            <field name="help" type="html">
+                <p>
+                    Odoo's project management allows you to manage the pipeline of your tasks efficiently. You can track progress, discuss on tasks, attach documents, etc.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem action="action_view_crm_task" id="menu_action_view_crm_task" parent="sales_team.menu_base_partner" sequence="1"/>   	
+
+		<record id="view_task_search_purchase_form" model="ir.ui.view">
+            <field name="name">project.task.search.purchase.form</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+               <search string="Tasks">
+                    <field name="name" string="Tasks"/>
+                    <field name="tag_ids"/>
+                    <field name="partner_id"/>
+                    <field name="purchase_order_id"/>
+                    <field name="product_id"/>
+                    <field name="assigned_partner_id"/>
+                    <field name="user_id"/>
+                    <field name="stage_id"/>
+                    <filter string="My Tasks" name="my_tasks" domain="[('user_id','=',uid)]"/>
+                    <filter string="Unassigned" name="unassigned" domain="[('user_id', '=', False)]"/>
+                    <separator/>
+                    <filter string="New" name="draft" domain="[('stage_id.sequence', '&lt;=', 1)]"/>
+                    <separator/>
+                    <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <group expand="0" string="Group By">
+                    	<filter string="Responsible" name="user_id" context="{'group_by':'user_id'}"/>
+						<filter string="Created by" name="created_by" context="{'group_by':'create_uid'}"/>
+                        <filter string="Purchase Order" name="purchase_order" context="{'group_by':'purchase_order_id'}"/>
+                        <filter string="Product" name="product" context="{'group_by':'product_id'}"/>
+                        <filter string="Partner" name="partner_ass" context="{'group_by':'assigned_partner_id'}"/>
+                        <filter string="Deadline" name="deadline" context="{'group_by':'date_deadline'}"/>
+						<filter string="Stage" name="Stage" context="{'group_by':'stage_id'}"/>
+                        <filter string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<record id="action_view_purchase_task" model="ir.actions.act_window">
+            <field name="name">Tasks</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+            <field name="context">{'search_default_my_tasks': 1}</field>
+            <field name="domain">['|', '|', ('purchase_order_id', '!=', False), ('product_id', '!=', False), ('assigned_partner_id', '!=', False)]</field>
+            <field name="search_view_id" ref="view_task_search_purchase_form"/>
+            <field name="help" type="html">
+                <p>
+                    Odoo's project management allows you to manage the pipeline of your tasks efficiently. You can track progress, discuss on tasks, attach documents, etc.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem action="action_view_purchase_task" id="menu_action_view_purchase_task" parent="purchase.menu_purchase_root" sequence="0"/>   	
+
+		<record id="view_task_search_account_form" model="ir.ui.view">
+            <field name="name">project.task.search.account.form</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+               <search string="Tasks">
+                    <field name="name" string="Tasks"/>
+                    <field name="tag_ids"/>
+                    <field name="partner_id"/>
+                    <field name="invoice_id"/>
+                    <field name="product_id"/>
+                    <field name="assigned_partner_id"/>
+                    <field name="user_id"/>
+                    <field name="stage_id"/>
+                    <filter string="My Tasks" name="my_tasks" domain="[('user_id','=',uid)]"/>
+                    <filter string="Unassigned" name="unassigned" domain="[('user_id', '=', False)]"/>
+                    <separator/>
+                    <filter string="New" name="draft" domain="[('stage_id.sequence', '&lt;=', 1)]"/>
+                    <separator/>
+                    <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Responsible" name="user_id" context="{'group_by':'user_id'}"/>
+						<filter string="Created by" name="created_by" context="{'group_by':'create_uid'}"/>
+                        <filter string="Invoice" name="invoice" context="{'group_by':'invoice_id'}"/>
+                        <filter string="Product" name="product" context="{'group_by':'product_id'}"/>
+                        <filter string="Partner" name="partner_ass" context="{'group_by':'assigned_partner_id'}"/>
+                        <filter string="Deadline" name="deadline" context="{'group_by':'date_deadline'}"/>
+						<filter string="Stage" name="Stage" context="{'group_by':'stage_id'}"/>
+                        <filter string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<record id="action_view_account_task" model="ir.actions.act_window">
+            <field name="name">Tasks</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+            <field name="context">{'search_default_my_tasks': 1}</field>
+            <field name="domain">['|', '|', ('invoice_id', '!=', False), ('product_id', '!=', False), ('assigned_partner_id', '!=', False)]</field>
+            <field name="search_view_id" ref="view_task_search_account_form"/>
+            <field name="help" type="html">
+                <p>
+                    Odoo's project management allows you to manage the pipeline of your tasks efficiently. You can track progress, discuss on tasks, attach documents, etc.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem action="action_view_account_task" id="menu_action_view_account_task" parent="account.menu_finance" sequence="1"/>   	
+				
+    </data>
+</odoo>

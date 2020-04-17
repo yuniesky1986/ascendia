@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_ascendia_project_type,access_ascendia_project_type,model_project_type,,1,1,1,1
+access_ascendia_project_states,access_ascendia_project_states,model_project_states,,1,1,1,1
+access_ascendia_clasification_task,access_ascendia_clasification_task,model_clasification_task,,1,1,1,1

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_asscendia_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+	        <xpath expr="//div[@t-if='doc.payment_term_id']" position="after">
+	        	<div t-if="doc.business_area" class="col-xs-3">
+                    <strong>Business Area</strong>
+                    <p t-field="doc.business_area"/>
+                </div>
+	        </xpath>
+        </template>
+
+        <record model="ir.ui.view" id="view_order_product_pivot_ascendia1">
+			<field name="name">view.order.form.inh.ascendia1</field>
+			<field name="model">sale.report</field>
+			<field name="inherit_id" ref="sale.view_order_product_pivot" />
+			<field name="arch" type="xml">
+				<field name="price_subtotal" position="after">
+					<field name="business_area" type="col"/>
+				</field>
+			</field>
+		</record>
+
+    </data>
+</openerp>

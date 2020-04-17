@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="weeday_monday" model="ascendia.training.credits.weekday">
+            <field name="name">Lunes</field>
+        </record>
+        <record id="weeday_tuesday" model="ascendia.training.credits.weekday">
+            <field name="name">Martes</field>
+        </record>
+        <record id="weeday_wednesday" model="ascendia.training.credits.weekday">
+            <field name="name">Miércoles</field>
+        </record>
+        <record id="weeday_thursday" model="ascendia.training.credits.weekday">
+            <field name="name">Jueves</field>
+        </record>
+        <record id="weeday_friday" model="ascendia.training.credits.weekday">
+            <field name="name">Viernes</field>
+        </record>
+        <record id="weeday_saturday" model="ascendia.training.credits.weekday">
+            <field name="name">Sábado</field>
+        </record>
+        <record id="weeday_sunday" model="ascendia.training.credits.weekday">
+            <field name="name">Domingo</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_config_settings_inherit" model="ir.ui.view">
+        <field name="name">project settings inherit</field>
+        <field name="model">project.config.settings</field>
+        <field name="inherit_id" ref="project.view_config_settings"/>
+        <field name="arch" type="xml">
+            <group name="timesheets" position="inside">
+                <group colspan="4" col="2">
+                    <field name="price"/>
+                </group>
+            </group>
+        </field>
+    </record>
+
+</odoo>

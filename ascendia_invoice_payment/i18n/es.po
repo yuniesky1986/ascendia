@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_invoice_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-08 21:28+0000\n"
+"PO-Revision-Date: 2017-05-08 21:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_invoice_payment
+#: model:mail.template,body_html:ascendia_invoice_payment.email_payment_25
+msgid "<p>Hello,</p>\n"
+"        Invoice ${object.number} is pending of payment since 25 days ago\n"
+"        "
+msgstr "<p>Estimado/a, ${object.partner_id.name},</p>\n"
+"        Tiene una factura pendiente de pago del ${object.date_invoice}, por favor proceda al pago de la misma por medio de transferencia bancaria en la cuenta del banco ${len(object.company_id.bank_ids) and object.company_id.bank_ids[0].acc_number or ''} lo antes posible, muchas gracias:\n <br/>"
+"Número de la factura: ${object.number} <br/>"
+"Total de la factura: ${object.amount_total} € <br/>"
+"Fecha de la factura: ${object.date_invoice} <br/>"
+"Referencia del pedido: ${object.origin and object.origin or ''} <br/>"
+"Su contacto: ${object.user_id.name}"
+
+
+#. module: ascendia_invoice_payment
+#: model:mail.template,body_html:ascendia_invoice_payment.email_payment_45
+msgid "<p>Hello,</p>\n"
+"        Invoice ${object.number} is pending of payment since 45 days ago\n"
+"        "
+msgstr "<p>Estimado/a, ${object.partner_id.user_id.partner_id.name},</p>\n"
+"        Tiene una factura pendiente de pago del ${object.date_invoice}, por favor proceda al pago de la misma por medio de transferencia bancaria en la cuenta del banco ${len(object.company_id.bank_ids) and object.company_id.bank_ids[0].acc_number or ''} lo antes posible, muchas gracias:<br/>"
+"Número de la factura: ${object.number} <br/>"
+"Total de la factura: ${object.amount_total} € <br/>"
+"Fecha de la factura: ${object.date_invoice}<br/>"
+"Referencia del pedido: ${object.origin and object.origin or ''}<br/>"
+"Su contacto: ${object.user_id.name}<br/>"
+
+#. module: ascendia_invoice_payment
+#: selection:account.invoice,payment_alert_state:0
+msgid "Alert 25 days"
+msgstr "Alert 25 days"
+
+#. module: ascendia_invoice_payment
+#: selection:account.invoice,payment_alert_state:0
+msgid "Alert 45 days"
+msgstr "Alert 45 days"
+
+#. module: ascendia_invoice_payment
+#: model:ir.model.fields,field_description:ascendia_invoice_payment.field_account_invoice_payment_alert_state
+msgid "Alert State"
+msgstr "Alert State"
+
+#. module: ascendia_invoice_payment
+#: model:ir.model,name:ascendia_invoice_payment.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: ascendia_invoice_payment
+#: model:mail.template,subject:ascendia_invoice_payment.email_payment_25
+msgid "Invoice payment pending 25 days"
+msgstr "Factura pendiente de cobro desde hace 25 días"
+
+#. module: ascendia_invoice_payment
+#: model:mail.template,subject:ascendia_invoice_payment.email_payment_45
+msgid "Invoice payment pending 45 days"
+msgstr "Factura pendiente de cobro desde hace 45 días"
+
+#. module: ascendia_invoice_payment
+#: selection:account.invoice,payment_alert_state:0
+msgid "No Alert"
+msgstr "No Alert"
+

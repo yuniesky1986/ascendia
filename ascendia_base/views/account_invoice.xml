@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+		<record id="invoice_supplier_form_number" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.form.number</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='number']" position="after">
+                	<field name="invoice_number" attrs="{'invisible': [('number', '!=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="before">
+                	<field name="data_protection"/>
+                </xpath>
+                <xpath expr="//button[@name='action_invoice_cancel']" position="replace">
+                	<button name="action_invoice_cancel" type="object" states="draft,open,proforma2" string="Cancel Bill" groups="account.group_account_invoice"/>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='account_analytic_id']" position="attributes">
+                	<attribute name="required">0</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="invoice_form_data_protection" model="ir.ui.view">
+            <field name="name">account.invoice.form.data.protection</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_term_id']" position="before">
+                	<field name="data_protection"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="invoice_form_analytic" model="ir.ui.view">
+            <field name="name">account.invoice.form.analytic</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='account_analytic_id']" position="attributes">
+                	<attribute name="required">0</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="account.action_account_payments" model="ir.actions.act_window">
+            <field name="name">Receipts</field>
+		</record>
+		
+		<menuitem id="account.menu_action_account_payments_receivable"
+			parent="account.menu_finance_receivables"
+			sequence="20"
+			groups="account.group_account_user"
+			name="Receipts"/>
+
+        <record id="invoice_tree_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.tree.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+            	<field name="origin" position="after">
+                    <field name="amount_untaxed_signed" sum="Total"/>
+                    <field name="amount_tax_signed" sum="Total"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="invoice_tree_currency_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.currency.tree.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_invoice_currency.invoice_tree"/>
+            <field name="arch" type="xml">
+            	<field name="amount_total_signed" position="attributes">
+                    <attribute name="sum">Total</attribute>
+                </field>
+                <field name="residual_signed" position="attributes">
+                    <attribute name="sum">Total</attribute>
+                </field>
+                <field name="amount_total_company_signed" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="residual_company_signed" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="invoice_supplier_tree_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.tree.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+            <field name="arch" type="xml">
+            	<field name="origin" position="after">
+                    <field name="amount_untaxed_signed" sum="Total"/>
+                    <field name="amount_tax_signed" sum="Total"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="invoice_supplier_currency_tree_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.currency.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_invoice_currency.invoice_supplier_tree"/>
+            <field name="arch" type="xml">
+                <field name="amount_total_signed" position="attributes">
+                    <attribute name="sum">Total</attribute>
+                </field>
+                <field name="residual_signed" position="attributes">
+                    <attribute name="sum">Total</attribute>
+                </field>
+                <field name="amount_total_company_signed" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="residual_company_signed" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

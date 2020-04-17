@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="group_super_admin" model="res.groups">
+	        <field name="name">Super Admin</field>
+	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+	        <field name="category_id" ref="base.module_category_hidden"/>
+	    </record>	
+	</data>
+</odoo>

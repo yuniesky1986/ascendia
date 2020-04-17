@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	
+    	<record id="crm_lead_stage_search_inherit" model="ir.ui.view">
+	        <field name="name">Stage - Search.inherit</field>
+	        <field name="model">crm.stage</field>
+            <field name="inherit_id" ref="crm.crm_lead_stage_search"/>
+            <field name="arch" type="xml">
+            	<field name="team_id" position="replace"/>
+            	<field name="probability" position="replace"/>
+            </field>
+        </record>
+        
+        <record id="crm_stage_tree_inherit" model="ir.ui.view">
+	        <field name="name">crm.stage.tree.inherit</field>
+	        <field name="model">crm.stage</field>
+            <field name="inherit_id" ref="crm.crm_stage_tree"/>
+            <field name="arch" type="xml">
+            	<field name="team_id" position="replace"/>
+            	<field name="probability" position="replace"/>
+            </field>
+        </record>
+        
+        <record id="crm_stage_form_inherit" model="ir.ui.view">
+	        <field name="name">crm.stage.form.inherit</field>
+	        <field name="model">crm.stage</field>
+	        <field name="inherit_id" ref="crm.crm_stage_form"/>
+            <field name="arch" type="xml">
+            	<field name="team_id" position="replace">
+            		<!-- <field name="can_be_create"/> -->
+            	</field>
+            	<field name="on_change" position="replace"/>
+            	<field name="probability" position="replace"/>
+            </field>
+        </record>
+    	
+    	<record id="crm.menu_crm_lead_stage_act" model="ir.ui.menu">
+	        <field eval="[(4, ref('ascendia_crm.group_super_admin')), (3, ref('base.group_user'))]" name="groups_id"/>
+	    </record>
+    </data>
+</odoo>

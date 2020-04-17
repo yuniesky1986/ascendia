@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	
+    	<record id="view_partners_form_crm1_ascendia" model="ir.ui.view">
+            <field name="name">view.res.partner.form.crm.inherited1.ascendia</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="crm.view_partners_form_crm1"/>
+            <field name="arch" type="xml">
+            	<button name="%(crm.crm_activity_report_action_tree)d" position="replace"/>
+            	<button name="%(crm.crm_lead_opportunities)d" position="attributes">
+            		<attribute name="attrs">{}</attribute>
+            	</button>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

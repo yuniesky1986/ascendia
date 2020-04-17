@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_account_analytic_line_tree_financial" model="ir.ui.view">
+            <field name="name">account.analytic.line.tree.financial</field>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <tree string="Analytic Entries" create="0">
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="account_id"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="unit_amount" sum="Quantity"/>
+                    <field name="amount" sum="Total"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_timesheet_line_tree_price" model="ir.ui.view">
+            <field name="name">account.analytic.line.tree.price</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="employee_id" required="1" options='{"no_open": True}'/>
+                </xpath>
+                <field name="user_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+	            <field name="unit_amount" position="after">
+	            	<field name="price" required="1" widget="monetary" sum="Total"/>
+	                <field name="amount" readonly="1" widget="monetary" force_save="1" sum="Total"/>
+	            </field>
+           </field>
+        </record>
+
+        <record id="view_task_form2_redefine_inherit" model="ir.ui.view">
+            <field name="name">project.task.form.redefine.inherit</field>
+            <field name="model">project.task</field>
+            <field eval="2" name="priority"/>
+            <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='date']" position="after">
+                	<field name="employee_id" required="1" options='{"no_open": True}'/>
+                </xpath>
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='user_id']" position="attributes">
+                	<attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='unit_amount']" position="after">
+                	<field name="price" required="1" widget="monetary" sum="Total"/>
+	                <field name="amount" readonly="1" widget="monetary" force_save="1" sum="Total"/>
+                </xpath>
+            </field>
+       	</record>
+
+        <record id="view_project_inherit_financial" model="ir.ui.view">
+            <field name="name">project.project.tree.financial</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="ascendia_project.view_project_inherit"/>
+            <field name="arch" type="xml">
+                <field name="progress_time" position="after">
+                    <field name="progress_invoiced" widget="progressbar"/>
+                    <field name="progress_paid" widget="progressbar"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="edit_project_lead_financial" model="ir.ui.view">
+            <field name="name">project.project.form.lead.financial</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="ascendia_crm_project.edit_project_lead"/>
+            <field name="arch" type="xml">
+                <header position="inside">
+                    <button class="oe_highlight" type="object"
+                            name="account_analytic_line_action_financial"
+                            string="Cost/Revenue" widget="statinfo"/>
+                </header>
+                <div name="button_box" position="inside">
+                    <button class="oe_stat_button" name="action_view_sales"
+                        type="object" icon="fa-usd">
+                        <field string="Sales" name="sales_count" widget="statinfo" />
+                    </button>
+                    <button type="object"  name="action_view_invoice_customer"
+                            class="oe_stat_button"
+                            icon="fa-pencil-square-o">
+                            <field name="customer_invoice_count" widget="statinfo" string="Customer Invoices"/>
+                    </button>
+                    <button type="object"  name="action_view_paid_customer"
+                            class="oe_stat_button"
+                            icon="fa-usd">
+                            <field name="customer_pay_count" widget="statinfo" string="Receives"/>
+                    </button>
+                    <button class="oe_stat_button" name="action_view_purchases"
+                        type="object" icon="fa-usd">
+                        <field string="Purchases" name="purchase_count" widget="statinfo" />
+                    </button>
+                    <button type="object"  name="action_view_invoice_supplier"
+                            class="oe_stat_button"
+                            icon="fa-pencil-square-o">
+                            <field name="supplier_invoice_count" widget="statinfo" string="Suppier Invoices"/>
+                    </button>
+                    <button type="object"  name="action_view_paid_supplier"
+                            class="oe_stat_button"
+                            icon="fa-usd">
+                            <field name="supplier_pay_count" widget="statinfo" string="Payments"/>
+                    </button>
+                </div>
+                <group name="progress_data" position="after">
+                    <group>
+                        <group string="Incomes">
+                            <field name="lead_amount" widget="monetary"/>
+                            <field name="sale_subtotal" widget="monetary"/>
+                            <field name="sale_total" widget="monetary"/>
+                            <field name="progress_invoiced" widget="progressbar"/>
+                            <field name="progress_paid" widget="progressbar"/>
+                        </group>
+                        <group string="Outcomes">
+                            <field name="timesheet_total" widget="monetary"/>
+                            <field name="purchase_subtotal" widget="monetary"/>
+                            <field name="purchase_total" widget="monetary"/>
+                            <field name="sup_progress_invoiced" widget="progressbar"/>
+                            <field name="sup_progress_paid" widget="progressbar"/>
+                        </group>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record id="action_analytic_line_tree" model="ir.actions.act_window">
+            <field name="name">Cost/Revenue</field>
+            <field name="res_model">account.analytic.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{'group_by': ['account_id', 'general_account_id']}</field>
+            <field name="search_view_id" ref="analytic.view_account_analytic_line_filter"/>
+            <field name="view_id" ref="view_account_analytic_line_tree_financial"/>
+        </record>
+
+        <menuitem action="action_analytic_line_tree"
+        	id="menu_action_analytic_line_tree"
+        	parent="project.menu_main_pm"
+        	sequence="20"/>
+    </data>
+</odoo>

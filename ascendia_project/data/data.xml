@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+	    <!-- Email template -->
+	    <record id="email_template_new_task" model="mail.template">
+	        <field name="name">Nueva tarea</field>
+	        <field name="subject">Nueva tarea asignada: ${object.name}</field>
+	        <field name="model_id" ref="project.model_project_task"/>
+	        <field name="body_html"><![CDATA[<p>Hola ${object.user_id.partner_id.name},</p>
+	        <a href='${object.get_compute_url()}'>Se le ha asignado una nueva tarea</a>
+	        ]]></field>
+	        <field name="email_to">${object.user_id.partner_id.email}</field>
+	        <field name="lang">${object.user_id.partner_id.lang}</field>
+	    </record>
+	</data>
+</odoo>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Courses-->
+    <record id="course_tree_view" model="ir.ui.view">
+        <field name="name">course.tree</field>
+        <field name="model">course</field>
+        <field name="arch" type="xml">
+            <tree string="Courses">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="number"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="course_form_view" model="ir.ui.view">
+        <field name="name">course.form</field>
+        <field name="model">course</field>
+        <field name="arch" type="xml">
+            <form string="Course">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="number"/>
+                            <field name="price"/>
+                            <field name="quotation"/>
+                            <field name="member_id"/>
+                            <field name="url_link" widget='url'/>
+                        </group>
+                        <group>
+                            <field name="total_hours"/>
+                            <field name="teoric_hours"/>
+                            <field name="practic_hours"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Tasks">
+                            <group>
+                                <field name="task_ids" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_courses" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">course</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <menuitem action="action_courses"
+              id="menu_courses"
+              parent="menu_training_employment"
+              sequence="3"/>
+
+</odoo>

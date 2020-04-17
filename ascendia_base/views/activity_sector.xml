@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="view_ascendia_activity_sector">
+            <field name="name">view.ascendia.activity.sector</field>
+            <field name="model">ascendia.activity.sector</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="parent_id"/>
+                    <field name="name"/>
+                    <field name="display_name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_form_ascendia_activity_sector">
+            <field name="name">view.form.ascendia.activity.sector</field>
+            <field name="model">ascendia.activity.sector</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Activity Sector">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="parent_id"/>
+                                <field name="display_name1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Control Menu -->
+        <record model="ir.actions.act_window" id="action_activity_sector">
+            <field name="name">Activity Sector</field>
+            <field name="res_model">ascendia.activity.sector</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_activity_sector"
+                  parent="sales_team.menu_sale_config"
+                  action="action_activity_sector"/>
+
+    </data>
+</odoo>

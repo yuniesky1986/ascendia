@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_order_form_inh_costsim">
+			<field name="name">view.order.form.inh.costsim</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<field name="partner_id" position="after">
+                    <field name="proposal_id"
+                           domain="[('private_state', '=', 'approved'), ('partner_id', '=', partner_id), ('approval_date', '&lt;=', confirmation_date), ('request_date', '&gt;=', confirmation_date)]"
+                           attrs="{'required': [('state', '!=', 'draft')]}"
+                           context="{'default_partner_id': partner_id}"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

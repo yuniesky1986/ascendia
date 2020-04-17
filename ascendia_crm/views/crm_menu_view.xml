@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+		<menuitem
+            id="menu_crm_opportunities_new"
+            name="Pipeline"
+            action="crm.action_your_pipeline"
+            parent="sales_team.menu_sales"
+            sequence="4"/>
+
+		<menuitem id="ascendia_price_request.menu_price_request"
+            parent="sales_team.menu_sales"
+            name="Price Request"
+            action="ascendia_price_request.action_price_request"
+       		sequence="5"/>
+      		<!-- groups='ascendia_price_request.group_edit_price_request' -->
+    </data>
+</odoo>

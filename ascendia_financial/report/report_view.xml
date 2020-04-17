@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report
+        id="act_report_mod111"
+        string="AEAT Model 111"
+        model="l10n.es.aeat.mod111.report"
+        report_type="qweb-pdf"
+        file="ascendia_financial.report_mod111"
+        name="ascendia_financial.report_mod111"
+    />
+
+</odoo>

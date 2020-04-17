@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="group_view_remove_menu" model="res.groups">
+            <field name="name">View Removes Menu</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+
+        <record id="calendar.mail_menu_calendar" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0,[ref('group_view_remove_menu')])]"/>
+        </record>
+
+        <record id="sale.menu_sale_invoicing" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0,[ref('group_view_remove_menu')])]"/>
+        </record>
+
+        <record id="sales_team.menu_sales_team_act" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0,[ref('group_view_remove_menu')])]"/>
+        </record>
+
+        <record id="ascendia_training_credits.menu_ascendia_training_credits_top1" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0,[ref('group_view_remove_menu')])]"/>
+        </record>
+
+        <record id="project.menu_project_report" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0,[ref('group_view_remove_menu')])]"/>
+        </record>
+
+        <record id="project.menu_projects" model="ir.ui.menu">
+            <field name="name">All Projects</field>
+        </record>
+
+    </data>
+</odoo>

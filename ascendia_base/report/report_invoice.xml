@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_invoice_ascendia" inherit_id="account.report_invoice_document">
+            <xpath expr="//span[@t-if='o.partner_id.vat']" position="replace">
+				<span t-if="o.partner_id.partner_nif">CIF: <span t-field="o.partner_id.partner_nif"/></span>
+            </xpath>
+            <xpath expr="//p[@t-if='o.fiscal_position_id.note']" position="after">
+				<p t-if="o.company_id.iban" style="margin-top: 60px;">
+	                <strong>
+	                <p>Pago por transferencia bancaria a la cuenta del BANCO SANTANDER: </p>
+	                <br/>
+	                <span t-field="o.company_id.iban"/></strong>
+	            </p>
+	            <t t-if="not o.data_protection">
+		            <br/>
+		            <br/>
+		            <p style="font-size : 10px;"><strong>Información Básica sobre Protección de Datos</strong></p>
+	                <table class="table table-bordered" style="font-size : 8px;">
+	                    <tr>
+	                        <th>Responsable del tratamiento</th>
+	                        <th>ASCÈNDIA REINGENIERIA Y CONSULTING, S.L.</th>
+	                    </tr>
+	                    <tr>
+	                        <th>Finalidad del tratamiento</th>
+	                        <th>Realizar la gestión de los servicios contratados, realizar la gestión económica, contable y fiscal de nuestros clientes.</th>
+	                    </tr>
+	                    <tr>
+	                        <th>Legitimación del tratamiento</th>
+	                        <th>Ejecución de un contrato.</th>
+	                    </tr>
+	                    <tr>
+	                        <th>Destinatarios</th>
+	                        <th>No se cederá datos a terceros salvo disposición legal.<br/>
+								No se realizarán transferencias internacionales de datos
+							</th>
+	                    </tr>
+	                    <tr>
+	                        <th>Derechos</th>
+	                        <th>Tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos, como se explica en la información adicional</th>
+	                    </tr>
+	                    <tr>
+	                        <th>Información adicional</th>
+	                        <th>Puede consultar la información adicional y detallada sobre Protección de Datos en la página web http://www.ascendiarc.com (Política de privacidad)</th>
+	                    </tr>
+	                </table>
+                </t>
+            </xpath>
+            <xpath expr="//span[@t-field='l.quantity']" position="replace">
+				<span>1</span>
+            </xpath>
+            <xpath expr="//span[@t-field='l.price_unit']" position="replace">
+				<span t-field="l.price_subtotal" 
+                     t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+            </xpath>
+        </template>
+        
+        <template id="external_layout_footer_ascendia" inherit_id="report.external_layout_footer">
+            <xpath expr="//t[@t-if='company.custom_footer']" position="replace">
+	            <t t-if="company.custom_footer">
+	                <span t-raw="company.rml_footer" style="font-size : 8px;"/>
+	            </t>
+            </xpath>
+        </template>
+    </data>
+</openerp>

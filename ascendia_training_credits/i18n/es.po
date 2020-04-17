@@ -1,0 +1,365 @@
+﻿# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_training_credits
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-08 16:46+0000\n"
+"PO-Revision-Date: 2018-02-08 16:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,modality:0
+msgid "Abandoned"
+msgstr "Abandonada"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_accession_agreement
+msgid "Accession Agreement"
+msgstr "Convenio de Adhesión"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_amount
+msgid "Amount to be bonded"
+msgstr "Cantidad a bonificar"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_certificate
+msgid "Certificate"
+msgstr "Diploma"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_concept
+#: model:ir.ui.view,arch_db:ascendia_training_credits.view_form_ascendia_training_credits
+msgid "Concepts"
+msgstr "Concepto de facturación"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_text
+#: model:ir.ui.view,arch_db:ascendia_training_credits.view_form_ascendia_training_credits
+msgid "Observations"
+msgstr "Observaciones"
+
+#. module: ascendia_training_credits
+#: model:ir.ui.menu,name:ascendia_training_credits.menu_ascendia_training_credits_lef2
+msgid "Configurations"
+msgstr "Configuraciones"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_create_uid
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month_create_uid
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type_create_uid
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_create_date
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month_create_date
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type_create_date
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_display_name
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month_display_name
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type_display_name
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year_display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_drive_url
+msgid "Drive link"
+msgstr "Enlace de la acción formativa al Drive"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_date_end
+msgid "End Date"
+msgstr "Fecha de Finalización"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_id
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month_id
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type_id
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year_id
+msgid "ID"
+msgstr ""
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_invoiced
+msgid "Invoiced"
+msgstr "Cantidad a facturar"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits___last_update
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month___last_update
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type___last_update
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month_write_uid
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type_write_uid
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_write_uid
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month_write_date
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type_write_date
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_write_date
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_modality
+msgid "Modality"
+msgstr "Modalidad"
+
+#. module: ascendia_training_credits
+#: model:ir.actions.act_window,name:ascendia_training_credits.action_ascendia_training_credits_month
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month
+#: model:ir.ui.menu,name:ascendia_training_credits.menu_ascendia_training_credits_month
+msgid "Month"
+msgstr "Mes"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_month_name
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_name
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type_name
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,accession_agreement:0
+#: selection:ascendia.training.credits,certificate:0
+#: selection:ascendia.training.credits,documentation_end_sent:0
+#: selection:ascendia.training.credits,documentation_initial_sent:0
+#: selection:ascendia.training.credits,documentation_signed:0
+#: selection:ascendia.training.credits,invoiced:0
+#: selection:ascendia.training.credits,registration_form:0
+msgid "No"
+msgstr "No"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_participants
+msgid "Number of Participants"
+msgstr "Número de participantes"
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,modality:0
+msgid "On-line"
+msgstr ""
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,modality:0
+msgid "On-site"
+msgstr "Presencial"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_lead_id
+msgid "Pipeline"
+msgstr "Oportunidad"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_documentation_signed
+msgid "Received the signed document"
+msgstr "Recibida la documetnación Firmada"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_registration_form
+msgid "Registration Form"
+msgstr "Ficha de Inscripción"
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,modality:0
+msgid "Remote"
+msgstr "Remoto"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_documentation_end_sent
+msgid "Sent the ended documentation of the course?"
+msgstr "Enviada la documentación final del curso?"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_documentation_initial_sent
+msgid "Sent the initial documentation of the course?"
+msgstr "Enviada la documentación inicial del curso?"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_date_start
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#. module: ascendia_training_credits
+#: model:ir.actions.act_window,name:ascendia_training_credits.action_ascendia_training_credits
+#: model:ir.ui.menu,name:ascendia_training_credits.menu_ascendia_training_credits
+#: model:ir.ui.menu,name:ascendia_training_credits.menu_ascendia_training_credits_lef1
+#: model:ir.ui.menu,name:ascendia_training_credits.menu_ascendia_training_credits_top1
+msgid "Training Credits"
+msgstr "Créditos de Formación"
+
+#. module: ascendia_training_credits
+#: model:ir.actions.act_window,name:ascendia_training_credits.action_ascendia_training_credits_type
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_type
+#: model:ir.ui.menu,name:ascendia_training_credits.menu_ascendia_training_credits_type
+msgid "Training Credits Type"
+msgstr "Tipo de curso"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_tutor
+msgid "Tutor"
+msgstr "Tutor"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_tutoring_schedule
+#: model:ir.ui.view,arch_db:ascendia_training_credits.view_form_ascendia_training_credits
+msgid "Tutoring schedule"
+msgstr "Horario de tutoría"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_user_id
+msgid "User"
+msgstr "Responsable comercial"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_wage_cost
+msgid "Wage Cost"
+msgstr "Coste salarial"
+
+#. module: ascendia_training_credits
+#: model:ir.actions.act_window,name:ascendia_training_credits.action_ascendia_training_credits_year
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_year
+#: model:ir.ui.menu,name:ascendia_training_credits.menu_ascendia_training_credits_year
+msgid "Year"
+msgstr "Año"
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,accession_agreement:0
+#: selection:ascendia.training.credits,certificate:0
+#: selection:ascendia.training.credits,documentation_end_sent:0
+#: selection:ascendia.training.credits,documentation_initial_sent:0
+#: selection:ascendia.training.credits,documentation_signed:0
+#: selection:ascendia.training.credits,invoiced:0
+#: selection:ascendia.training.credits,registration_form:0
+msgid "Yes"
+msgstr "Si"
+
+#. module: ascendia_training_credits
+#: model:ir.model,name:ascendia_training_credits.model_ascendia_training_credits
+msgid "ascendia.training.credits"
+msgstr ""
+
+#. module: ascendia_training_credits
+#: model:ir.model,name:ascendia_training_credits.model_ascendia_training_credits_month
+msgid "ascendia.training.credits.month"
+msgstr ""
+
+#. module: ascendia_training_credits
+#: model:ir.model,name:ascendia_training_credits.model_ascendia_training_credits_type
+msgid "ascendia.training.credits.type"
+msgstr ""
+
+#. module: ascendia_training_credits
+#: model:ir.model,name:ascendia_training_credits.model_ascendia_training_credits_year
+msgid "ascendia.training.credits.year"
+msgstr ""
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_weekday_ids
+msgid "Weekday"
+msgstr "Días de impartición"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_hour_qty
+msgid "Total Hours"
+msgstr "Horas totales"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_pres_hour_qty
+msgid "Training Hours"
+msgstr "Horas de formación presencial"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_morning_schedule
+msgid "Morning Schedule"
+msgstr "Horario de Mañana"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_afternoon_schedule
+msgid "Afternoon Schedule"
+msgstr "Horario de Tarde"
+
+#. module: ascendia_training_credits
+#: model:ir.ui.view,arch_db:ascendia_training_credits.view_form_ascendia_training_credits
+msgid "Schedule"
+msgstr "Horario"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_center_id
+msgid "Formation Center"
+msgstr "Centro de formación"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_formation_mean
+msgid "Formation Mean"
+msgstr "Medios para la formación"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_group_action
+msgid "Formative Action"
+msgstr "Acción Formativa"
+
+#. module: ascendia_training_credits
+#: model:ir.ui.view,arch_db:ascendia_training_credits.view_form_ascendia_training_credits
+msgid "Group"
+msgstr "Grupo"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_group_code
+msgid "Code"
+msgstr "Código"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_group_name
+msgid "Denomination"
+msgstr "Denominación"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_group_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,formation_mean:0
+msgid "With Accredit Mean"
+msgstr "Con medios de la entidad de formación acreditada y/o inscrita"
+
+#. module: ascendia_training_credits
+#: selection:ascendia.training.credits,formation_mean:0
+msgid "With External Mean"
+msgstr "Con medios de la entidad externa que tiene encomendada la organización"
+
+#. module: ascendia_training_credits
+#: model:ir.model.fields,field_description:ascendia_training_credits.field_ascendia_training_credits_teacher_id
+msgid "Teacher"
+msgstr "Formador"
+

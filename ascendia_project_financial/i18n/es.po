@@ -1,0 +1,266 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ascendia_project_financial
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-16 17:07+0000\n"
+"PO-Revision-Date: 2019-11-16 17:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_customer_invoice_count
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_supplier_invoice_count
+msgid "# Invoices"
+msgstr "# Facturas"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_customer_pay_count
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_supplier_pay_count
+msgid "# Payments"
+msgstr "# Pagos"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_purchase_count
+msgid "# Purchases"
+msgstr "# Compras"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_sales_count
+msgid "# Sales"
+msgstr "# Ventas"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_account_payment_tree_financial_project
+msgid "Amount"
+msgstr "Importe"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_account_analytic_line_tree_financial
+msgid "Analytic Entries"
+msgstr "Entradas Analíticas"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_financial_project
+msgid "Click to create a quotation that will be converted into a purchase order."
+msgstr "Clic para crear un presupuesto que será convertido a Pedido de Compra."
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_account_payments_financial_customer
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_account_payments_financial_supplier
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_orders_financial_supplier
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_view_invoice_line_tree_financial_project
+msgid "Click to register a payment"
+msgstr "Clic para registrar un Pago."
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,name:ascendia_project_financial.action_analytic_line_tree
+#: model:ir.ui.menu,name:ascendia_project_financial.menu_action_analytic_line_tree
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Cost/Revenue"
+msgstr "Costo/Beneficio"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Customer Invoices"
+msgstr "Facturas de Cliente"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_lead_amount
+msgid "Expected Revenue"
+msgstr "Total Oportunidades"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Incomes"
+msgstr "Entradas"
+
+#. module: ascendia_project_financial
+#: model:ir.model,name:ascendia_project_financial.model_account_invoice_line
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_invoice_line_tree_financial_project
+msgid "Invoice Line"
+msgstr "Lineas de Factura"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,name:ascendia_project_financial.action_view_invoice_line_tree_financial_project
+msgid "Invoice Lines"
+msgstr "Lineas de Factura"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_progress_invoiced
+msgid "Invoice Progress"
+msgstr "Facturación"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_account_payment_invoice_number
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_order_tree_financial_project
+msgid "Order Number"
+msgstr "Número Pedido"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Outcomes"
+msgstr "Salidas"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_sup_progress_paid
+msgid "Paid State"
+msgstr "Pagos"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,name:ascendia_project_financial.action_account_payments_financial_supplier
+#: model:ir.model,name:ascendia_project_financial.model_account_payment
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_account_payments_financial_customer
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_account_payments_financial_supplier
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_orders_financial_supplier
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_view_invoice_line_tree_financial_project
+msgid "Payments are used to register liquidity movements (send, collect or transfer money).\n"
+"                  You can then process those payments by your own means or by using installed facilities."
+msgstr ""
+
+#. module: ascendia_project_financial
+#: model:ir.model,name:ascendia_project_financial.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.purchase_order_line_tree_financial_project
+msgid "Purchase Order Line"
+msgstr "Linea Pedido Compra"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,name:ascendia_project_financial.action_financial_project
+msgid "Purchase Orders Line"
+msgstr "Linea Pedido Compra"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_purchase_total
+msgid "Purchase Total"
+msgstr "Total Compras"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_purchase_subtotal
+msgid "Purchase Total Without IVA"
+msgstr "Total Compras(sin impuestos)"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Purchases"
+msgstr "Compras"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_account_analytic_line_tree_financial
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_progress_paid
+msgid "Received State"
+msgstr "Cobros"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,name:ascendia_project_financial.action_account_payments_financial_customer
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Receives"
+msgstr "Cobros"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_sale_total
+msgid "Sale Total"
+msgstr "Total Pedido Venta"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_sale_subtotal
+msgid "Sale Total Without IVA"
+msgstr "Total Pedido Venta(sin impuestos)"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,name:ascendia_project_financial.action_orders_financial_supplier
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_order_tree_financial_project
+msgid "Sales Orders"
+msgstr "Ventas"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.edit_project_lead_financial
+msgid "Suppier Invoices"
+msgstr "Factura Proveedor"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_project_project_sup_progress_invoiced
+msgid "Supplier Invoice"
+msgstr "Factura Proveedor"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_account_analytic_line_tree_financial
+msgid "Total"
+msgstr "Total"
+
+#. module: ascendia_project_financial
+#: model:ir.model.fields,field_description:ascendia_project_financial.field_account_invoice_line_line_price_total
+msgid "Total Amount"
+msgstr "Total"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_invoice_line_tree_financial_project
+msgid "Total Discount"
+msgstr "Descuento"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_invoice_line_tree_financial_project
+msgid "Total Price Subtotal"
+msgstr "Subtotal"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_invoice_line_tree_financial_project
+msgid "Total Price Total"
+msgstr "Total"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_invoice_line_tree_financial_project
+msgid "Total Price Unit"
+msgstr "Total"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_invoice_line_tree_financial_project
+msgid "Total Qty"
+msgstr "Cantidad"
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.view_order_tree_financial_project
+msgid "Total Tax Included"
+msgstr "Total"
+
+#. module: ascendia_project_financial
+#: model:ir.actions.act_window,help:ascendia_project_financial.action_financial_project
+msgid "Use this menu to search within your purchase orders by\n"
+"                references, vendor, products, etc. For each purchase order,\n"
+"                you can track the related discussion with the vendor, control\n"
+"                the products received and control the vendor bills."
+msgstr ""
+
+#. module: ascendia_project_financial
+#: model:ir.ui.view,arch_db:ascendia_project_financial.purchase_order_line_tree_financial_project
+msgid "Vendor"
+msgstr "Proveedor"
+

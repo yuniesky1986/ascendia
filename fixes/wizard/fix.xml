@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="fix_form" model="ir.ui.view">
+            <field name="name">fix.form</field>
+            <field name="model">fix</field>
+            <field name="arch" type="xml">
+                <form string="Fixes">
+                    <group>
+                        <field name="action"/>
+                    </group>
+                    <footer>
+                        <button name="execute_this_action" string="Execute"
+                        	type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <record id="fix_action" model="ir.actions.act_window">
+            <field name="name">Fixes</field>
+            <field name="res_model">fix</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="fix_form"/>
+            <field name="target">new</field>
+        </record>
+        
+        <menuitem id='fix_menu'
+            action='fix_action'
+            groups='base.group_user'
+            sequence="4"
+            parent="base.menu_administration"/>
+        
+    </data>
+</openerp>

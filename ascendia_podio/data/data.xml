@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="edition_number_1" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 1</field>
+        </record>
+        <record id="edition_number_2" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 2</field>
+        </record>
+        <record id="edition_number_3" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 3</field>
+        </record>
+        <record id="edition_number_4" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 4</field>
+        </record>
+        <record id="edition_number_5" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 5</field>
+        </record>
+        <record id="edition_number_6" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 6</field>
+        </record>
+        <record id="edition_number_7" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 7</field>
+        </record>
+        <record id="edition_number_8" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 8</field>
+        </record>
+        <record id="edition_number_9" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 9</field>
+        </record>
+        <record id="edition_number_10" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 10</field>
+        </record>
+        <record id="edition_number_11" model="ascendia.edition.number">
+            <field name="name">Fecha Edición 11</field>
+        </record>
+        
+
+    </data>
+</odoo>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="email_payment_25" model="mail.template">
+            <field name="name">Invoice payment pending 25 days</field>
+            <field name="subject">Invoice payment pending 25 days</field>
+            <field name="model_id"
+                   ref="model_account_invoice"/>
+            <field name="body_html"><![CDATA[<p>Hello,</p>
+        Invoice ${object.number} is pending of payment since 25 days ago
+        ]]></field>
+            <field name="email_to">${object.partner_id.email}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+        </record>
+
+        <record id="email_payment_45" model="mail.template">
+            <field name="name">Invoice payment pending 45 days</field>
+            <field name="subject">Invoice payment pending 45 days</field>
+            <field name="model_id"
+                   ref="model_account_invoice"/>
+            <field name="body_html"><![CDATA[<p>Hello,</p>
+        Invoice ${object.number} is pending of payment since 45 days ago
+        ]]></field>
+            <field name="email_to">${object.partner_id.user_id.email}</field>
+            <field name="lang">${object.partner_id.user_id.partner_id.lang}</field>
+        </record>
+
+
+        <record id="email_due_date_invoice" model="mail.template">
+            <field name="name">Fecha de Factura</field>
+            <field name="subject">Se aproxima la fecha de facturación</field>
+            <field name="model_id"
+                   ref="model_account_invoice"/>
+            <field name="body_html"><![CDATA[<p>Hola,${object.user_id.partner_id.name}</p>
+        Esta <a href='${object.url}'>factura </a>  está cerca de su fecha de facturación.
+        ]]></field>
+            <field name="email_to">${object.user_id.email}</field>
+            <field name="lang">${object.user_id.partner_id.lang}</field>
+        </record>
+
+        <record model="ir.cron" id="invoice_payment_monitoring_cron">
+            <field name="name">Monitor de pago 25 días</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field eval="" name="args"/>
+            <field name="model">account.invoice</field>
+            <field name="function">payment_monitoring</field>
+        </record>
+        <record model="ir.cron" id="invoice_payment_monitoring_cron45">
+            <field name="name">Monitor de pago 45 días</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field eval="" name="args"/>
+            <field name="model">account.invoice</field>
+            <field name="function">payment_monitoring_45</field>
+        </record>
+        <record model="ir.cron" id="invoice_due_date_monitoring_cron">
+            <field name="name">Monitor de fecha de factura</field>
+            <field name="active">True</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field eval="" name="args"/>
+            <field name="model">account.invoice</field>
+            <field name="function">due_date_monitoring</field>
+        </record>
+
+    </data>
+</odoo>

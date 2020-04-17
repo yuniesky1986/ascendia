@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Certificate Formation-->
+    <record id="certificate_formation_tree_view1" model="ir.ui.view">
+        <field name="name">ascendia.certificate.formation.tree</field>
+        <field name="model">ascendia.certificate.formation</field>
+        <field name="arch" type="xml">
+            <tree string="Formation Certificate">
+                <field name="partner_id"/>
+                <field name="lead_id"/>
+                <field name="year"/>
+                <field name="name" string="No. Certificate"/>
+                <field name="user_to"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="certificate_formation_form_view" model="ir.ui.view">
+        <field name="name">ascendia.certificate.formation.form</field>
+        <field name="model">ascendia.certificate.formation</field>
+        <field name="arch" type="xml">
+            <form string="Certificate Formation">
+                <sheet>
+                	<div class="oe_title">
+                            <label for="partner_id" class="oe_edit_only"/>
+                            <h1>
+                                <field name="partner_id" required="True"/>
+                            </h1>
+                        </div>
+                    <group>
+                        <group>
+                            <field name="lead_id"/>
+                            <field name="year"/>
+                        </group>
+                        <group>
+                             <field name="name" string="No. Certificate"/>
+                			 <field name="user_to"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Tasks">
+                            <group>
+                                <field name="task_ids" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ascendia_certificate_formation" model="ir.actions.act_window">
+        <field name="name">Formation Certificate</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ascendia.certificate.formation</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <menuitem action="action_ascendia_certificate_formation"
+              id="menu_certificate_formation"
+              parent="menu_ascendia_marketing"
+              sequence="1"/>
+              
+              
+        <!-- Certificate LOPD-->
+    <record id="certificate_lopd_tree_view" model="ir.ui.view">
+        <field name="name">ascendia.certificate.lopd.tree</field>
+        <field name="model">ascendia.certificate.lopd</field>
+        <field name="arch" type="xml">
+            <tree string="LOPD Certificate">
+                <field name="partner_id"/>
+                <field name="lead_id"/>
+                <field name="name" string="No. Certificate"/>
+                <field name="year"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="certificate_lopd_form_view" model="ir.ui.view">
+        <field name="name">ascendia.certificate.lopd.form</field>
+        <field name="model">ascendia.certificate.lopd</field>
+        <field name="arch" type="xml">
+            <form string="Certificate Formation">
+                <sheet>
+                	<div class="oe_title">
+                            <label for="partner_id" class="oe_edit_only"/>
+                            <h1>
+                                <field name="partner_id" required="True"/>
+                            </h1>
+                        </div>
+                    <group>
+                        <group>
+                            <field name="lead_id"/>
+                            <field name="year"/>
+                        </group>
+                        <group>
+                             <field name="name" string="No. Certificate"/>
+                        </group>
+                    </group>
+                    <notebook>
+                    	 <page string="Edition Dates">
+                            <group>
+                                <field name="edition_ids" nolabel="1">
+                                	<tree editable="bottom">
+                                		<field name="edition_id" required="1" string="No. Edition Date"/>
+                                		<field name="date"/>
+                                	</tree>
+                                </field>
+                            </group>
+                     	</page>
+                        <page string="Tasks">
+                            <group>
+                                <field name="task_ids" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ascendia_certificate_lopd" model="ir.actions.act_window">
+        <field name="name">LOPD Certificate</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ascendia.certificate.lopd</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <menuitem action="action_ascendia_certificate_lopd"
+              id="menu_certificate_lopd"
+              parent="menu_ascendia_marketing"
+              sequence="2"/>
+
+
+        <!-- Certificate Good Execution-->
+    <record id="certificate_formation_tree_view" model="ir.ui.view">
+        <field name="name">ascendia.certificate.good.execution.tree</field>
+        <field name="model">ascendia.certificate.good.execution</field>
+        <field name="arch" type="xml">
+            <tree string="Good Execution Certificate">
+                <field name="partner_id"/>
+                <field name="lead_id" string="Service"/>
+                <field name="user_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="certificate_good_execution_form_view" model="ir.ui.view">
+        <field name="name">ascendia.certificate.good.execution.form</field>
+        <field name="model">ascendia.certificate.good.execution</field>
+        <field name="arch" type="xml">
+            <form string="Certificate Formation">
+                <sheet>
+                	<div class="oe_title">
+                            <label for="partner_id" class="oe_edit_only"/>
+                            <h1>
+                                <field name="partner_id" required="True"/>
+                            </h1>
+                        </div>
+                    <group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="state"/>
+                        </group>
+                        <group>
+                             <field name="lead_id" string="Service"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ascendia_certificate_good_execution" model="ir.actions.act_window">
+        <field name="name">Good Execution Certificate</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ascendia.certificate.good.execution</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <menuitem action="action_ascendia_certificate_good_execution"
+              id="menu_certificate_good_execution"
+              parent="menu_ascendia_marketing"
+              sequence="3"/>
+              
+        <!-- Edition Year-->
+    <record id="edition_year_tree_view" model="ir.ui.view">
+        <field name="name">ascendia.edition.year.tree</field>
+        <field name="model">ascendia.edition.year</field>
+        <field name="arch" type="xml">
+            <tree string="Edition Year">
+                <field name="certificate_id"/>
+                <field name="edition_id"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="edition_year_form_view" model="ir.ui.view">
+        <field name="name">ascendia.edition.year.form</field>
+        <field name="model">ascendia.edition.year</field>
+        <field name="arch" type="xml">
+            <form string="Edition Year">
+            	<group>
+	                <field name="certificate_id"/>
+	                <field name="edition_id"/>
+	                <field name="date"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_ascendia_edition_year" model="ir.actions.act_window">
+        <field name="name">Edition Year</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ascendia.edition.year</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+    
+        <menuitem
+            id="menu_asc_marketing_config"
+            name="Configuration"
+            parent="menu_ascendia_marketing"
+            sequence="4"/>
+
+    <menuitem action="action_ascendia_edition_year"
+              id="menu_edition_year"
+              parent="menu_asc_marketing_config"
+              sequence="4"/>
+
+</odoo>

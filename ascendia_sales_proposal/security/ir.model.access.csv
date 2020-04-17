@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_ascendia_sale_proposal,access_ascendia_sale_proposal,model_ascendia_sale_proposal,,1,1,1,1
+access_ascendia_economic_condition,access_ascendia_economic_condition,model_ascendia_economic_condition,,1,1,1,1

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_form2" model="ir.ui.view">
+            <field name="name">account.account.form</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_form"/>
+            <field name="arch" type="xml">
+                <field name="code" position="before">
+                    <field name="group"/>
+                </field>
+            </field>
+        </record>
+
+		<record id="action_account_moves_all_a1" model="ir.actions.act_window">
+            <field name="context">{'journal_type':'general'}</field>
+            <field name="name">Journal Items</field>
+            <field name="res_model">account.move.line</field>
+            <field name="view_id" ref="account.view_move_line_tree"/>
+            <field name="view_mode">tree,form,pivot</field>
+        </record>
+        <menuitem action="action_account_moves_all_a1" id="account.menu_action_account_moves_all" parent="account.menu_finance_entries" sequence="1" groups="base.group_no_one" />
+    </data>
+</odoo>

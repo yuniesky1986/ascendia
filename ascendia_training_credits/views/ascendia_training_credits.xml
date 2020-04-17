@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	
+    	<record model="ir.ui.view" id="view_ascendia_training_credits_type">
+            <field name="name">view.ascendia.training.credits.type</field>
+            <field name="model">ascendia.training.credits.type</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_form_ascendia_training_credits_type">
+            <field name="name">view.form.ascendia.training.credits.type</field>
+            <field name="model">ascendia.training.credits.type</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="True"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_ascendia_training_credits_year">
+            <field name="name">view.ascendia.training.credits.year</field>
+            <field name="model">ascendia.training.credits.year</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_form_ascendia_training_credits_year">
+            <field name="name">view.form.ascendia.training.credits.year</field>
+            <field name="model">ascendia.training.credits.year</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="True"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_ascendia_training_credits_month">
+            <field name="name">view.ascendia.training.credits.month</field>
+            <field name="model">ascendia.training.credits.month</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_form_ascendia_training_credits_month">
+            <field name="name">view.form.ascendia.training.credits.month</field>
+            <field name="model">ascendia.training.credits.month</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="True"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_ascendia_training_credits">
+            <field name="name">view.ascendia.training.credits</field>
+            <field name="model">ascendia.training.credits</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="lead_id"/>
+                    <field name="modality"/>
+                    <field name="year"/>
+                    <field name="month"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_form_ascendia_training_credits">
+            <field name="name">view.form.ascendia.training.credits</field>
+            <field name="model">ascendia.training.credits</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                        	<group>
+                        		<field name="partner_id"/>
+                        		<field name="lead_id"
+                        			domain="[('partner_id', '=', partner_id)]"
+                        			context="{'default_partner_id': partner_id}"/>
+                        		<field name="year"/>
+                        		<field name="month"/>
+                        		<field name="drive_url" widget="url"/>
+                        		<field name="type" widget="many2many_tags"/>
+                        		<field name="tutor" widget="many2many_tags"/>
+                        		<field name="user_id" widget="many2many_tags"/>
+                        		<field name="teacher_id"/>
+                        		<field name="center_id"/>
+                        	</group>
+                        	<group>
+                        		<field name="modality"/>
+                        		<field name="accession_agreement"/>
+                        		<field name="registration_form"/>
+                        		<field name="certificate"/>
+                        		<field name="invoiced"/>
+                        		<field name="documentation_initial_sent"/>
+                        		<field name="documentation_end_sent"/>
+                        		<field name="documentation_signed"/>
+                        	</group>
+                        </group>
+                        <group>
+                        	<group>
+                        		<field name="participants"/>
+                        	</group>
+                        	<group>
+                        		<field name="amount"/>
+                        		<field name="wage_cost"/>
+                        	</group>
+                        </group>
+                        <notebook>
+                        	<page string="Schedule">
+                        		<group>
+                        			<group>
+                        				<field name="hour_qty"/>
+                        				<field name="date_start"/>
+                        				<field name="date_end"/>
+                        			</group>
+                        			<group>
+                        				<field name="pres_hour_qty"/>
+                        				<field name="morning_schedule"/>
+                        				<field name="afternoon_schedule"/>
+                        				<field name="weekday_ids" widget="many2many_tags" options="{'no_create': True, 'no_edit': True,}"/>
+                        			</group>
+	                        	</group>
+                        	</page>
+                        	<page string="Group">
+                        		<group>
+                        			<group>
+                        				<field name="group_action"/>
+                        				<field name="group_code"/>
+                        				<field name="group_name"/>
+                        			</group>
+                        			<group>
+                        				<field name="formation_mean"/>
+                        				<field name="group_description"/>
+                        			</group>
+	                        	</group>
+                        	</page>
+                        	<page string="Concepts">
+                        		<group>
+	                        		<field name="concept" widget="html" nolabel="1"/>
+	                        	</group>
+                        	</page>
+                        	<page string="Observations">
+                        		<group>
+	                        		<field name="text" widget="html" nolabel="1"/>
+	                        	</group>
+                        	</page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+                </form>
+            </field>
+        </record>
+
+        <menuitem id="menu_ascendia_training_credits_top1"
+         	name="Training Credits"
+         	web_icon="ascendia_training_credits,static/description/icon.png"
+            sequence="12"/>
+
+		<menuitem id="menu_ascendia_training_credits_lef1"
+			parent="menu_ascendia_training_credits_top1"
+            name="Training Credits"
+            sequence="1"/>
+            
+        <menuitem id="menu_ascendia_training_credits_lef2"
+			parent="menu_ascendia_training_credits_top1"
+            name="Configurations"
+            sequence="2"/>
+                  
+        <record model="ir.actions.act_window" id="action_ascendia_training_credits_type">
+            <field name="name">Training Credits Type</field>
+            <field name="res_model">ascendia.training.credits.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ascendia_training_credits_type"
+            parent="menu_ascendia_training_credits_lef2"
+            name="Training Credits Type"
+            action="action_ascendia_training_credits_type"
+            sequence="1"/>
+
+		<record model="ir.actions.act_window" id="action_ascendia_training_credits_year">
+            <field name="name">Year</field>
+            <field name="res_model">ascendia.training.credits.year</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ascendia_training_credits_year"
+            parent="menu_ascendia_training_credits_lef2"
+            name="Year"
+            action="action_ascendia_training_credits_year"
+            sequence="2"/>
+
+		<record model="ir.actions.act_window" id="action_ascendia_training_credits_month">
+            <field name="name">Month</field>
+            <field name="res_model">ascendia.training.credits.month</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ascendia_training_credits_month"
+            parent="menu_ascendia_training_credits_lef2"
+            name="Month"
+            action="action_ascendia_training_credits_month"
+            sequence="3"/>
+
+        <record model="ir.actions.act_window" id="action_ascendia_training_credits">
+            <field name="name">Training Credits</field>
+            <field name="res_model">ascendia.training.credits</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ascendia_training_credits"
+            parent="menu_ascendia_training_credits_lef1"
+            name="Training Credits"
+            action="action_ascendia_training_credits"
+            sequence="1"/>
+
+    </data>
+</odoo>
